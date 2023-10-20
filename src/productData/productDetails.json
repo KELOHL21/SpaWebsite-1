@@ -1,0 +1,36 @@
+{
+   "products" : [
+      {
+         "cleanser": {
+            "title":"Gel Cleanser",
+            "description":"A foaming, tingling wash that cleanses without drying. Peppermint and Spearmint oils refresh and improve micro-circulation to aid in the elimination of toxins. African Aloe extract exhibits soothing properties.",
+            "price":"R450.00 - R600.00",
+            "size":"100ml/200ml"
+         },
+         "moisturizer": {
+            "title":"Nourish Moisturiser",
+            "description":"This intensely calming moisturiser combines probiotic extracts and prebiotic nutrients to boost barrier function for sensitive skin.",
+            "price":"R850.00",
+            "size":"50ml"
+         },
+         "ageserum": {
+            "title":"SKINCEUTICALS Blemish + Age Defense Serum",
+            "description":"The firming and lifting effects of this age-defying serum are enhanced with long-term use. It contains a range of probiotic and plant extracts that improve skin structure and reduce pigmentation.",
+            "price":"R2500.00",
+            "size":"30ml"
+         },
+         "mist": {
+            "title":"MESOESTETIC Hydratonic Mist",
+            "description":"A refreshing mist to complete the cleansing process with actives that revitalise and improve skin condition. Rooibos Extract protects against environmental damage and exhibits antioxidant properties. Olive Leaf Extract combats the negative effects of pollution.",
+            "price":"R420.00",
+            "size":"100ml"
+         },
+         "bodybutter": {
+            "title":"Body Butter",
+            "description":"This a super-rich and creamy treat for your skin. It contains Community Fair Trade shea butter and has a delicious nutty scent.",
+            "price":"R430.00",
+            "size":"400ml"
+         }
+      }
+   ]
+}
