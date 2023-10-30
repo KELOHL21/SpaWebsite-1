@@ -1,0 +1,412 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+.logo{
+   width: 65px;
+   height: 65px;
+   padding: 5px;
+   margin-left:10px;
+}
+
+/* Navbar */
+.navbar_main{
+   background-color: white;
+   width: 100%;
+   display: flex;
+   height: 70px;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   font-family: 'Bacasime Antique', serif;
+   position: fixed;
+}
+
+.navlinks{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   list-style: none;
+   text-decoration: none;
+   font-size: 20px;
+   letter-spacing: 2px;
+   font-weight: 500;
+}
+
+.navlinks li a{
+   padding: 10px;
+   list-style: none;
+}
+
+li {
+   padding: 10px;
+   list-style: none;
+}
+
+a{
+   text-decoration: none;
+   color: #8F7D6D;
+}
+
+.userUi{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.bookBtn{
+  margin-left: 10px;
+  margin-right: 10px ;
+  padding: 5px;
+  align-items: center;
+  background-color: #8F7D6D;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-family: 'Bacasime Antique', serif;
+}
+
+.bookBtn a{
+   color: white;
+}
+
+.navIcons{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.navIcons i{
+   padding: 5px;
+}
+
+.toggle_btn{
+   margin-right: 2rem;
+   display: none;
+}
+
+button{
+   cursor: pointer;
+}
+
+/* Drop down Menu */
+.dropdown{
+   display: none;
+   position: absolute;
+   top:70px;
+   right: 2rem;
+   width: 300px;
+   height: 0;
+   background-color: #8F7D6D;
+   backdrop-filter:blue(15px);
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   overflow: hidden;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center; 
+   text-align: center;
+   transition: height .6s cubic-bezier(0.165, 0.84, 0.44, 1) ;
+   z-index: 1001;
+}
+
+.bookBtn2{
+   padding: 8px;
+   width: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color:white;
+   font-weight: bold;
+   font-size: 1.5rem;
+   color: #5a5555;
+   letter-spacing: 2px;
+   margin: auto;
+   border: none;
+   border-radius: 5px;
+   margin-top: 2rem;
+   font-family: 'Bacasime Antique', serif;
+ } 
+
+ .dropdown a:hover{
+   text-decoration: underline;
+   text-decoration-color: white;
+   transition: all;
+ }
+
+/* Allows the drop down to occure along side the above code */
+.dropdown.open{
+   height: 500px;
+   z-index: 1001;
+}
+
+.dropdown li{
+   padding: 0.7rem;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   color: white;
+}
+
+.dropdown li a{
+   color: white;
+   font-size: 3rem;
+}
+
+.dropdownlist{
+   height: 500px;
+   align-items: center;
+   margin-top: 3rem;
+}
+
+
+/* Responsive */
+@media (max-width:750px){
+   .navbar_main .navlinks,
+   .navbar_main .bookBtn,
+   .navbar_main .navIcons{
+      display: none;
+   }
+
+   .navbar_main .toggle_btn{
+      display: block;
+   }
+
+   .dropdown{
+      display: block;
+      left:0;
+      width: 100%;
+   }
+}
+.title{
+   font-size: xx-large;
+   padding-top: 10rem;
+   padding-bottom: 2rem;
+   letter-spacing: 10px;
+   font-family: 'Bacasime Antique', serif;
+   color: #8F7D6D;
+}
+
+.title1{
+   font-size: xx-large;
+   padding-top: 5rem;
+   padding-bottom: 2rem;
+   letter-spacing: 8px;
+   font-family: 'Bacasime Antique', serif;
+   color: #8F7D6D;
+}
+
+.header{
+   font-size: xx-large;
+   padding-top: 2rem;
+   letter-spacing: 8px;
+   font-family: 'Bacasime Antique', serif;
+   color: #8F7D6D;
+}
+
+.price{
+   font-family: 'Ysabeau Infant', sans-serif;
+   font-size: 1.2rem;
+   text-align: center;
+   align-items: center;
+   padding: 5px;
+   letter-spacing: 2px;
+   font-weight: bold;
+   color: #8F7D6D;
+}
+
+.prodBtns{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-top: 2rem;
+}
+
+.checkOut{
+   padding: 15px;
+   font-size: 15px;
+   letter-spacing: 2px;
+   border-radius: 15px;
+   color: #5a5555;
+   border: none;
+   margin: 5px;
+}
+
+.addBtn{
+   padding: 15px;
+   font-size: 16px;
+   border-radius: 15px;
+   border: none;
+   letter-spacing: 2px;
+   margin: 5px;
+   background-color: #8F7D6D;
+   color: white;
+}
+
+/* Selected Product Display */
+.productDetail {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: -1;
+ }
+
+ .productDetail .prodImg {
+   position: relative;
+   backdrop-filter: blur(80%);
+   text-align: center;
+   align-items: center;
+   z-index: 1;
+ }
+
+ .prodDescription{
+   text-align: center;
+   align-items: center;
+   width: 85%;
+   font-size: 1.5rem;
+   font-family: 'Ysabeau Infant', sans-serif;
+   margin: auto;
+   margin-top: 2.2rem;
+   margin-bottom: -10rem;
+   line-height: 40px;
+   letter-spacing: 3px;
+   border: none;
+   border-radius: 25px;
+   background-color: whitesmoke;
+   opacity: 85%;
+   color: #8F7D6D;
+   padding: 10px;
+ }
+
+ @media screen and (min-width:900px) {
+   .prodDescription{
+      width: 65%;
+   }
+ }
+
+ .productDetail .prodImg img {
+   width: 250px;
+   height: 250px;
+   max-width: 100%;
+   border-radius: 20px;
+   position: relative; /* Adjust as needed */
+   display: block; 
+   filter: drop-shadow(0 8px 7px #1e1e1e69);
+ }
+
+ @media screen and (min-width:900px) {
+   .productDetail .prodImg img{
+      width:350px;
+      height:350px;
+   }
+ }
+ 
+
+/*  Similar Product Display  */
+.detailsContainer{
+   z-index: -1;
+   padding-top: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.productBackground{
+   background-image: url('/src/assets/img/bodySpiral4.png');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   height: fit-content;
+   width: fit-content;
+   z-index:-1;
+   padding-top: 1.5rem;
+}
+
+@media screen and (min-width:900px) {
+   .productBackground{
+      background-position-y: bottom ;
+      background-position: bottom;
+   }
+}
+
+.productListContainer{
+   width: 900px;
+   max-width: 90vw;
+   text-align: center;
+   margin: auto;
+   margin-top: 2rem;
+   z-index: -1;
+}
+
+.productSection .productItem img{
+   width: 120px;
+   height: 120px;
+   border-radius: 10px;
+   filter: blur(20%);
+
+}
+
+.productSection{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 25px;
+   padding: 10px;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin: auto;
+   filter:drop-shadow(0 5px 8px #74737369) ;
+
+}
+
+.productSection .productItem:hover{
+   filter: drop-shadow(0 8px 7px #1e1e1e69);
+   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+   transition: ease-in-out;
+}
+
+.productSection .productItem{
+   background-color: whitesmoke;
+   width: 250px;
+   height: 250px;
+   padding: 20px;
+   border-radius: 20px;
+   color: black;
+}
+
+.productSection .productItem h2{
+   font-size: 12px;
+   text-transform: uppercase;
+   padding: 5px;
+   letter-spacing: 2px;
+}
+
+.productSection .productItem p{
+   letter-spacing: 2px;
+   padding-top: 15px;
+}
+
+@media screen and (max-width:992px) {
+.productSection{
+   grid-template-columns:repeat(3, 1fr) ;
+   z-index: -1;
+}
+}
+
+@media screen and (max-width:768px) {
+.productSection{
+   grid-template-columns:repeat(2, 1fr) ;
+   z-index: -1;
+}
+}
+
+
+/* font-family: 'Bacasime Antique', serif;
+font-family: 'Ysabeau Infant', sans-serif; */

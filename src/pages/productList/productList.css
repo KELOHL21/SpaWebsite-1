@@ -1,0 +1,262 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+.logo{
+   width: 65px;
+   height: 65px;
+   padding: 5px;
+   margin-left:10px;
+}
+
+/* Navbar */
+.navbar_main{
+   background-color: white;
+   width: 100%;
+   display: flex;
+   height: 70px;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   font-family: 'Bacasime Antique', serif;
+   position: fixed;
+}
+
+.navlinks{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   list-style: none;
+   text-decoration: none;
+   font-size: 20px;
+   letter-spacing: 2px;
+   font-weight: 500;
+}
+
+.navlinks li a{
+   padding: 10px;
+   list-style: none;
+}
+
+li {
+   padding: 10px;
+   list-style: none;
+}
+
+a{
+   text-decoration: none;
+}
+
+.userUi{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.bookBtn{
+  margin-left: 10px;
+  margin-right: 10px ;
+  padding: 5px;
+  align-items: center;
+  background-color: #8F7D6D;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-family: 'Bacasime Antique', serif;
+}
+
+.bookBtn a{
+   color: white;
+}
+
+.navIcons{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.navIcons i{
+   padding: 5px;
+}
+
+.toggle_btn{
+   margin-right: 2rem;
+   display: none;
+}
+
+button{
+   cursor: pointer;
+}
+
+/* Drop down Menu */
+.dropdown{
+   display: none;
+   position: absolute;
+   top:70px;
+   right: 2rem;
+   width: 300px;
+   height: 0;
+   background-color: #8F7D6D;
+   backdrop-filter:blue(15px);
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   overflow: hidden;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center; 
+   text-align: center;
+   transition: height .6s cubic-bezier(0.165, 0.84, 0.44, 1) ;
+   z-index: 1001;
+}
+
+.bookBtn2{
+   padding: 8px;
+   width: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color:white;
+   font-weight: bold;
+   font-size: 1.5rem;
+   color: #5a5555;
+   letter-spacing: 2px;
+   margin: auto;
+   border: none;
+   border-radius: 5px;
+   margin-top: 2rem;
+   font-family: 'Bacasime Antique', serif;
+ } 
+
+ .dropdown a:hover{
+   text-decoration: underline;
+   text-decoration-color: white;
+   transition: all;
+ }
+
+/* Allows the drop down to occure along side the above code */
+.dropdown.open{
+   height: 500px;
+   z-index: 1001;
+}
+
+.dropdown li{
+   padding: 0.7rem;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   color: white;
+}
+
+.dropdown li a{
+   color: white;
+   font-size: 3rem;
+}
+
+.dropdownlist{
+   height: 500px;
+   align-items: center;
+   margin-top: 3rem;
+}
+
+
+/* Responsive */
+@media (max-width:750px){
+   .navbar_main .navlinks,
+   .navbar_main .bookBtn,
+   .navbar_main .navIcons{
+      display: none;
+   }
+
+   .navbar_main .toggle_btn{
+      display: block;
+   }
+
+   .dropdown{
+      display: block;
+      left:0;
+      width: 100%;
+   }
+}
+
+/* ProductList */
+
+body{
+   z-index: 1;
+}
+
+a{
+   text-decoration: none;
+   color: rgb(87, 77, 77);
+}
+
+.productListContainer{
+   width: 900px;
+   max-width: 90vw;
+   text-align: center;
+}
+
+.title{
+   font-size: xx-large;
+   padding-top: 10rem;
+   padding-bottom: 2rem;
+   letter-spacing: 10px;
+}
+
+.productSection .productItem img{
+      width: 120px;
+      height: 150px;
+      border-radius: 20px;
+      filter: blur(20%);
+}
+
+.productSection{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 25px;
+   padding: 10px;
+   filter:drop-shadow(0 5px 8px #74737369) ;
+}
+
+.productSection .productItem:hover{
+   filter: drop-shadow(0 8px 7px #1e1e1e69);
+   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+   transition: ease-in-out;
+}
+
+.productSection .productItem{
+   background-color: whitesmoke;
+   padding: 20px;
+   border-radius: 20px;
+}
+
+.productSection .productItem h2{
+   font-size: 12px;
+   text-transform: uppercase;
+   padding: 5px;
+   letter-spacing: 2px;
+}
+
+.productSection .productItem p{
+   letter-spacing: 2px;
+   padding-top: 15px;
+}
+
+@media screen and (max-width:992px) {
+   .productSection{
+      grid-template-columns:repeat(3, 1fr) ;
+   }
+}
+
+@media screen and (max-width:768px) {
+   .productSection{
+      grid-template-columns:repeat(2, 1fr) ;
+   }
+}
+
+
+/* font-family: 'Bacasime Antique', serif;
+font-family: 'Ysabeau Infant', sans-serif; */
