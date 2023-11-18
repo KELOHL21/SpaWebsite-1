@@ -1,14 +1,8 @@
+
 *{
    box-sizing: border-box;
    margin: 0;
    padding: 0;
-}
-
-.logo{
-   width: 65px;
-   height: 65px;
-   padding: 5px;
-   margin-left:10px;
 }
 
 /* Navbar */
@@ -23,6 +17,13 @@
    font-family: 'Bacasime Antique', serif;
    position: fixed;
    z-index: 9999;
+}
+
+.logo{
+   width: 65px;
+   height: 65px;
+   padding: 5px;
+   margin-left:10px;
 }
 
 .navlinks{
@@ -111,6 +112,7 @@ button{
    justify-content: center; 
    text-align: center;
    transition: height .6s cubic-bezier(0.165, 0.84, 0.44, 1) ;
+   z-index: 1001;
 }
 
 .bookBtn2{
@@ -140,6 +142,7 @@ button{
 /* Allows the drop down to occure along side the above code */
 .dropdown.open{
    height: 500px;
+   z-index: 1001;
 }
 
 .dropdown li{
@@ -181,78 +184,6 @@ button{
    }
 }
 
-/* ProductList */
-
-
-a{
-   text-decoration: none;
-   color: rgb(87, 77, 77);
+body{
+   background-color: #C8AB92;
 }
-
-.productListContainer{
-   width: 900px;
-   max-width: 90vw;
-   text-align: center;
-}
-
-.title{
-   font-size: xx-large;
-   padding-top: 10rem;
-   padding-bottom: 2rem;
-   letter-spacing: 10px;
-}
-
-.productSection .productItem img{
-      width: 120px;
-      height: 150px;
-      border-radius: 20px;
-      filter: blur(20%);
-}
-
-.productSection{
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 25px;
-   padding: 10px;
-   filter:drop-shadow(0 5px 8px #74737369) ;
-}
-
-.productSection .productItem:hover{
-   filter: drop-shadow(0 8px 7px #1e1e1e69);
-   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-   transition: ease-in-out;
-}
-
-.productSection .productItem{
-   background-color: whitesmoke;
-   padding: 20px;
-   border-radius: 20px;
-}
-
-.productSection .productItem h2{
-   font-size: 12px;
-   text-transform: uppercase;
-   padding: 5px;
-   letter-spacing: 2px;
-}
-
-.productSection .productItem p{
-   letter-spacing: 2px;
-   padding-top: 15px;
-}
-
-@media screen and (max-width:992px) {
-   .productSection{
-      grid-template-columns:repeat(3, 1fr) ;
-   }
-}
-
-@media screen and (max-width:768px) {
-   .productSection{
-      grid-template-columns:repeat(2, 1fr) ;
-   }
-}
-
-
-/* font-family: 'Bacasime Antique', serif;
-font-family: 'Ysabeau Infant', sans-serif; */

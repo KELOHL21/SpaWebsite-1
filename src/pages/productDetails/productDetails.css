@@ -22,6 +22,7 @@
    justify-content: space-between;
    font-family: 'Bacasime Antique', serif;
    position: fixed;
+   z-index: 9999;
 }
 
 .navlinks{
@@ -111,7 +112,6 @@ button{
    justify-content: center; 
    text-align: center;
    transition: height .6s cubic-bezier(0.165, 0.84, 0.44, 1) ;
-   z-index: 1001;
 }
 
 .bookBtn2{
@@ -141,7 +141,6 @@ button{
 /* Allows the drop down to occure along side the above code */
 .dropdown.open{
    height: 500px;
-   z-index: 1001;
 }
 
 .dropdown li{
@@ -253,7 +252,6 @@ button{
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   z-index: -1;
  }
 
  .productDetail .prodImg {
@@ -323,8 +321,8 @@ button{
    background-repeat: no-repeat;
    background-size: contain;
    background-position: center;
-   height: fit-content;
-   width: fit-content;
+   height: 100%;
+   width: 100%;
    z-index:-1;
    padding-top: 1.5rem;
 }

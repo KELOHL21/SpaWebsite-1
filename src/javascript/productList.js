@@ -1,4 +1,4 @@
-// Fecthing Products
+// Fetching Products
 
 let products = null;
 fetch('/src/productData/productDetails.json')
@@ -10,8 +10,7 @@ fetch('/src/productData/productDetails.json')
    injectData();
 })
 
-// displaying data
-
+// Displaying data
 let dataList = document.querySelector('.productSection');
 function injectData(){
    // creater foreach loop to loop over the products

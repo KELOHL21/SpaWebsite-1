@@ -9,6 +9,18 @@
    background-color: #C8AB92;
 }
 
+.subBody{
+   background-image: url('./assets/img/bodyPattern.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position-x: center;
+   background-position-y: bottom;
+   height: 100%;
+   width: 100%;
+   background-blend-mode: darken;
+   background-color: rgba(255, 255, 255, 0.055);
+}
+
 .logo{
    width: 65px;
    height: 65px;
@@ -27,6 +39,7 @@
    justify-content: space-between;
    font-family: 'Bacasime Antique', serif;
    position: fixed;
+   z-index: 9999;
 }
 
 .navlinks{
@@ -187,12 +200,14 @@ button{
    }
 }
 
+/* Body  */
+
  /* Hero Section */
 section#heroContainer {
    padding-top: 6rem;
    height: 600px;
    width: 100%;
-   background-color: #1E1E1E;
+   background-color: black;
    color: white;
 }
 
@@ -200,7 +215,7 @@ section#heroContainer {
    background-image: url('./assets/img/heroSection.png');
    background-repeat: no-repeat;
    background-size: cover;
-   height: 460px;
+   height: 480px;
    justify-content: center;
    align-items: center;
    text-transform: uppercase;
@@ -302,10 +317,10 @@ section#heroContainer {
    font-family: 'Bacasime Antique', serif;
    text-transform: uppercase;
    font-weight: bold;
-   font-size: 25px;
-   margin: 2rem;
+   font-size: 20px;
+   margin-top: 3rem;
    color: #5A5555;
-   letter-spacing: 3px;
+   letter-spacing: 2px;
 }
 
 .srvcIcon{
@@ -333,7 +348,9 @@ section#heroContainer {
    font-family: 'Ysabeau Infant', sans-serif;
    color: #5A5555;
    text-transform: uppercase;
-   margin-top: -1rem;
+   margin-top: -0.5rem;
+   font-size:10px;
+   font-weight: 800;
 }
 
 @media screen and  (min-width:600px){
@@ -368,17 +385,11 @@ section#heroContainer {
 }
 
 /* About Section */
-
-.aboutImg{
-   width: 200px;
-   height: 280px;
-   padding: 0.5rem;
-}
-
 #aboutContainer{
-   background-color: rgba(255, 255, 255, 0.7);
-   margin: 0.5rem;
-   margin-top: -6rem;
+   background-color: rgba(255, 255, 255, 0.5);
+   margin: 0.8rem;
+   border-radius: 10px;
+   margin-top: -7rem;
 }
 
 @media screen and (min-width:800px) {
@@ -396,21 +407,31 @@ section#heroContainer {
    text-align: center;
 }
 
+.aboutHeader{
+   font-family: 'Bacasime Antique', serif;
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: 20px;
+   text-align: center;
+   color: #5A5555;
+   letter-spacing: 5px;
+}
 
 .aboutContent h1{
-   padding-left: 5rem;
-   padding-top: 2rem;
-   font-size: xx-large;
-   letter-spacing: 5px;
+   padding: 1rem;
+   margin: auto;
+   font-size: 20px;
+   letter-spacing: 2px;
    font-family: 'Bacasime Antique', serif;
 }
 
 .details{
    padding: 0.3rem;
    font-family: 'Ysabeau Infant', sans-serif;
-   width: 100%;
-   text-align: justify;
-   line-height: 15px;
+   width: 98%;
+   text-align: center;
+   line-height: 20px;
+   margin-top: -1rem;
 }
 
 .aboutRightSide{
@@ -445,6 +466,10 @@ section#heroContainer {
    margin-top: 1rem;
 }
 
+.abtBtn:hover{
+   background-color:#9c8b7b;
+}
+
 /* Shop Section */
 
 #shopContainer{
@@ -453,14 +478,14 @@ section#heroContainer {
 }
 
 .shopSlogan{
-   width: 96%;
+   width: 90%;
    margin: auto;
    font-family: 'Ysabeau Infant', sans-serif;
    text-transform: uppercase;
    font-size: 10px;
    text-align: center;
    letter-spacing: 2px;
-   margin-top: -1.5rem;
+   margin-top: 5px;
    line-height: 18px;
 }
 
@@ -793,9 +818,9 @@ section#heroContainer {
    text-align: center;
    align-items: center;
    background-color: rgba(255, 255, 255, 0.7);
-   width: 82%;
+   width: 88%;
    border-radius: 5px;
-   height: 50vh;
+   height: 52vh;
    margin-bottom: 1rem;
    padding: 1rem;
 }
@@ -813,7 +838,7 @@ section#heroContainer {
    font-family: 'Bacasime Antique', serif;
    text-transform: uppercase;
    font-weight: bold;
-   font-size: 25px;
+   font-size: 20px;
    margin: 1rem;
    color: #5A5555;
    letter-spacing: 5px;
@@ -825,11 +850,11 @@ section#heroContainer {
    text-transform: uppercase;
    width: 70%;
    filter: drop-shadow(2px 1px 1px rgba(255, 255, 255, 0.747));
-   font-size: 13px;
+   font-size: 10px;
    letter-spacing: 3px;
    padding: 10px;
    margin-top: -1rem;
-   line-height: 20px;
+   line-height: 15px;
    font-weight: bold;
 }
 
@@ -857,31 +882,34 @@ label {
    margin-left: 4.5rem;
    font-weight: bold;
    letter-spacing: 3px;
+   top: 0;
+   margin: auto;
+   padding: 5px;
 }
 
 input {
    width: 100%;
-   padding: 10px;
    font-size: 16px;
    border: 1px solid #ccc;
    border-radius: 5px;
    color: #8F7D6D;
    text-align: start;
-   margin-top: 5px; /* Space between labels and inputs */
    margin: auto;
 }
 
 .inputName{
-   width: 50vw;
+   width: 60vw;
+   height: 30px;
 }
 
 .inputEmail{
-   width: 50vw;
+   width: 60vw;
+   height: 30px;
 }
 
 .inputMessage{
    height: 85px;
-   width: 50vw;
+   width: 60vw;
 }
 
 .contactBtn{
@@ -898,9 +926,271 @@ input {
    margin-top: 1rem;
 }
 
+/* Social/ Instagram Carousel */
 
+.socialContainer{
+   text-align: center;
+   align-items: center;
+   margin-top: 5rem;
+}
 
+.carousel-slider {
+   width: 100%; /* Adjust the width as needed */
+   overflow: hidden;
+   object-fit: contain;
+   margin: 10px 0 10px;
+   white-space: nowrap;
+   position: relative;
+ }
+
+ /* This section creates the fading effect at the start and end of the carousel */
+ .carousel-slider:before,
+ .carousel-slider:after{
+      position:absolute;
+      top:0;
+      width: 150px;
+      height:100%;
+      content: "";
+      z-index: 2;
+ } 
+
+ .carousel-slider:before{
+   left: 0;
+   background: linear-gradient(to left, rgba(240,240,240,0),  #b6a18ed3);
+ }
+
+ .carousel-slider:after{
+   right: 0;
+   background: linear-gradient(to right, rgba(240,240,240,0),  #b6a18ed3);
+ }
+
+ .carousel-slider:hover .carousel-slide{
+   animation-play-state: paused;
+ }
+
+ /* EASY CAROUSEL */
+ @keyframes instaslide {
+   from{
+      transform: translateX(0);
+   }
+   to{
+      transform: translateX(-100%);
+   }
+ }
+
+ .carousel-slide {
+   animation: 60s instaslide infinite linear ;
+   display: inline-block;
+ }
+
+ .carousel-slide img{
+   width: 180px;
+   height: 150px;
+   object-fit: cover;
+ }
+
+ @media screen and (min-width:900px) {
+   .carousel-slide img{
+      width: 200px;
+      height: 200px;
+   }
+ }
+
+ .instaHeader{
+   font-family: 'Bacasime Antique', serif;
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: 20px;
+   margin: 1.5rem;
+   color: #5A5555;
+   letter-spacing: 2px;
+ }
  
+
+ .instaSubHeader{
+   font-size: 10px;
+   text-align: center;
+   color: #5A5555;
+   width: 65%;
+   margin: auto;
+   letter-spacing: 2px;
+   padding: 8px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+   align-items: center;
+   margin-top: -1.5rem;
+   line-height: 15px;
+ }
+
+ /* Footer */
+.footer_container{
+   width: 100%;
+   height: 50vh;
+   background-color: black;
+   color: white;
+   margin: auto;
+   margin-top: 5rem;
+ }
+
+ .top_footer{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   text-align: center;
+   margin: auto;
+   background-image: url('./assets/img/bodySwirl.png');
+   background-size:cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-clip: border-box;
+ }
+
+ .footer_slogan{
+   white-space: nowrap;
+   transform: rotate(-90deg);
+   transform-origin: left; /* Set the rotation origin to the left */
+   writing-mode:horizontal-tb;
+   align-items: center;
+   justify-content: center;
+   margin-top: 15rem;
+   margin-left: 1.2rem;
+   font-size: 0.6rem;
+   font-weight: bold;
+   letter-spacing: 2px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+ }
+
+ .footer_details{
+   padding-bottom: 12rem;
+   text-align: center;
+   padding: 2rem;
+   margin: auto;
+ }
+
+ .location{
+   text-align: center;
+   margin: 15px;
+   margin-left: -6rem;
+   width: 93%;
+ }
+ .hours{
+   text-align: center;
+   margin: 15px;
+   margin-left: -6rem;
+   width: 93%;
+ }
+
+ .contact{
+   text-align: center;
+   margin: 15px;
+   margin-left: -6rem;
+   width: 93%;
+ }
+
+ .slogan_footer{
+   text-align: left;
+ }
+
+ .footer_header{
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+   font-size: 18px;
+   letter-spacing: 5px;
+   padding: 8px;
+   white-space: nowrap;
+   text-align: center;
+   align-items: center;
+ }
+
+ .location_pin{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+ .week{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+ .weekend{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+ .landline{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+.whatsapp{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+}
+
+.email{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+}
+
+.bottom_footer{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 100%;
+   height: 10vh;
+   background-color: white;
+   color: black;
+   margin-top: 1.8rem;
+}
+
+.copyright{
+   text-transform: uppercase;
+   font-size: 8px;
+   margin: auto;
+   text-align: left;
+   letter-spacing: 2px;
+   font-weight: 800;
+}
+
+.icons{
+   text-transform: uppercase;
+   font-size: 10px;
+   margin: auto;
+}
+
+.icons:hover{
+   cursor: pointer;
+}
+
+.icons i{
+   padding: 2px;
+}
 
 /* font-family: 'Bacasime Antique', serif;
 font-family: 'Ysabeau Infant', sans-serif; */
