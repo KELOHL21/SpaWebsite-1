@@ -187,3 +187,90 @@ button{
 body{
    background-color: #C8AB92;
 }
+
+
+/* Banner */
+
+.bannerDetails{
+   margin: auto;
+   width: 86%;
+   white-space:wrap;
+   text-align: center;
+   font-family: 'Bacasime Antique', serif;
+   font-size: 14px;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+   line-height: 40px;
+   color: #5a4736;
+}
+
+.srvBanner{
+   background-image: url('/src/assets/srvImg/serviceBanner.jpg');
+   height: 600px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.bannerBtns{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   padding: 2rem;
+}
+
+.bookBtn{
+   background-color:#B6A18E;
+   padding: 10px;
+   width: 10rem;
+   font-size: 13px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+   align-items: center;
+   letter-spacing:3px;
+   border: none;
+   border-radius: 10px;
+   color: white;
+   border: 0.5px solid #C8AB92;
+}
+
+.cntBtn{
+   background-color:#C8AB92;
+   padding: 10px;
+   width: 10rem;
+   font-size: 13px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+   letter-spacing:3px;
+   align-items: center;
+   margin-left: 1rem;
+   border: none;
+   border-radius: 10px;
+   border: 0.5px solid #B6A18E;
+}
+
+/* Main Body */
+.serviceContainer{
+   width: 100%;
+   text-align: center;
+   align-items: center;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.srvDecription{
+   margin: auto;
+   font-size: 13px;
+   width: 82%;
+   line-height: 21px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   color: #5a4736;
+   margin: 1rem;
+}
+/* font-family: 'Bacasime Antique', serif;
+font-family: 'Ysabeau Infant', sans-serif; */
