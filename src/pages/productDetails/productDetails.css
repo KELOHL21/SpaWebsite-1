@@ -90,6 +90,10 @@ a{
    display: none;
 }
 
+.toggle_btn i:hover{
+   cursor: pointer;
+}
+
 button{
    cursor: pointer;
 }
@@ -195,7 +199,7 @@ button{
    padding-top: 5rem;
    padding-bottom: 2rem;
    letter-spacing: 8px;
-   font-family: 'Bacasime Antique', serif;
+   font-family: 'Ysabeau Infant', sans-serif;
    color: #8F7D6D;
 }
 

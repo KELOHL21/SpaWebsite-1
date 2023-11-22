@@ -26,6 +26,10 @@
    margin-left:10px;
 }
 
+.logo:hover{
+   cursor: pointer;
+}
+
 .navlinks{
    display: flex;
    flex-direction: row;
@@ -88,6 +92,10 @@ a{
 .toggle_btn{
    margin-right: 2rem;
    display: none;
+}
+
+.toggle_btn i:hover{
+   cursor: pointer;
 }
 
 button{
@@ -197,11 +205,12 @@ body{
    white-space:wrap;
    text-align: center;
    font-family: 'Bacasime Antique', serif;
-   font-size: 14px;
+   font-size: 25px;
+   font-weight: 700;
    text-transform: uppercase;
-   letter-spacing: 4px;
+   letter-spacing: 5px;
    line-height: 40px;
-   color: #5a4736;
+   color: #473f37;
 }
 
 .srvBanner{
@@ -233,7 +242,7 @@ body{
    align-items: center;
    letter-spacing:3px;
    border: none;
-   border-radius: 10px;
+   border-radius: 5px;
    color: white;
    border: 0.5px solid #C8AB92;
 }
@@ -249,7 +258,7 @@ body{
    align-items: center;
    margin-left: 1rem;
    border: none;
-   border-radius: 10px;
+   border-radius: 5px;
    border: 0.5px solid #B6A18E;
 }
 
@@ -259,18 +268,243 @@ body{
    text-align: center;
    align-items: center;
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    justify-content: center;
 }
 
 .srvDecription{
    margin: auto;
-   font-size: 13px;
-   width: 82%;
-   line-height: 21px;
-   font-family: 'Ysabeau Infant', sans-serif;
-   color: #5a4736;
+   font-size: 16px;
+   width: 80%;
+   line-height: 20px;
+   letter-spacing: 2.2px;
+   font-family: 'Bacasime Antique', serif;
+   color: #6b4a2ef1;
    margin: 1rem;
+   font-weight: 700;
 }
+
+.srvListContainer{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-top: 2rem;
+}
+
+.srvItemContainer{
+   display: flex;
+   flex-direction: column;
+   margin-top: 2rem;
+   background-color: rgba(255, 255, 255, 0.836);
+}
+
+.srvImg{
+   width: 100%;
+   height: 320px;
+   object-fit: cover;
+}
+
+.srvDetails{
+   text-align: center;
+   align-items: center;
+   margin: 2.5rem;
+}
+
+.srvItemContainer{
+   margin-top: -0.1rem;
+   display: flex;
+   flex-direction: column-reverse;
+}
+
+.srvDetails h2{
+   width: 75%;
+   font-size: 33px;
+   margin: auto;
+   font-family: 'Bacasime Antique', serif;
+}
+
+.srvDetails p{
+   font-family: 'Ysabeau Infant', sans-serif;
+   font-size: 15px;
+   width: 95%;
+   text-align: center;
+   align-items: center;
+   margin: auto;
+   letter-spacing: 2px;
+   line-height: 20px;
+   padding: 15px;
+}
+
+
+ /* Footer */
+ .footer_container{
+   width: 100%;
+   height: 50vh;
+   background-color: black;
+   color: white;
+   margin: auto;
+ }
+
+ .top_footer{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   text-align: center;
+   margin: auto;
+   background-image: url('./assets/img/bodySwirl.png');
+   background-size:cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-clip: border-box;
+ }
+
+ .footer_slogan{
+   white-space: nowrap;
+   transform: rotate(-90deg);
+   transform-origin: left; /* Set the rotation origin to the left */
+   writing-mode:horizontal-tb;
+   align-items: center;
+   justify-content: center;
+   margin-top: 15rem;
+   margin-left: 1.2rem;
+   font-size: 0.6rem;
+   font-weight: bold;
+   letter-spacing: 2px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+ }
+
+ .footer_details{
+   padding-bottom: 12rem;
+   text-align: center;
+   padding: 2rem;
+   margin: auto;
+ }
+
+ .location{
+   text-align: center;
+   margin: 15px;
+   margin-left: -6rem;
+   width: 93%;
+ }
+
+ .hours{
+   text-align: center;
+   margin: 15px;
+   margin-left: -6rem;
+   width: 93%;
+ }
+
+ .contact{
+   text-align: center;
+   margin: 15px;
+   margin-left: -6rem;
+   width: 93%;
+ }
+
+ .slogan_footer{
+   text-align: left;
+ }
+
+ .footer_header{
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+   font-size: 18px;
+   letter-spacing: 5px;
+   padding: 8px;
+   white-space: nowrap;
+   text-align: center;
+   align-items: center;
+ }
+
+ .location_pin{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+ .week{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+ .weekend{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+ .landline{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+.whatsapp{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+}
+
+.email{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+}
+
+.bottom_footer{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 100%;
+   height: 10vh;
+   background-color: white;
+   color: black;
+   margin-top: 1.8rem;
+}
+
+.copyright{
+   text-transform: uppercase;
+   font-size: 8px;
+   margin: auto;
+   text-align: left;
+   letter-spacing: 2px;
+   font-weight: 800;
+}
+
+.icons{
+   text-transform: uppercase;
+   font-size: 10px;
+   margin: auto;
+}
+
+.icons:hover{
+   cursor: pointer;
+}
+
+.icons i{
+   padding: 2px;
+}
+
 /* font-family: 'Bacasime Antique', serif;
 font-family: 'Ysabeau Infant', sans-serif; */

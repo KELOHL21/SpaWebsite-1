@@ -17,8 +17,16 @@
 
       <nav class="navbar_main">
 
-         <div>
-            <img class="logo" src="/src/assets/img/logo2.png" alt="Logo"/>
+         <div class="userInfo">
+
+            <a href="/index.html">
+               <img class="logo" src="/src/assets/img/logo2.png" alt="Logo"/>
+            </a>
+
+            <div class="userIcons">                
+                  <i class="fa-solid fa-2xl fa-circle-user" style="color: #5a5555;"></i>
+            </div>  
+
          </div>
 
          <ul class="navlinks">
@@ -67,14 +75,52 @@
          
       </nav>
    </header>
-   
+
+
    <container class="productListContainer">
+
       
-      <h1 class="headers title">Product List</h1>
+      <div class="belowNav">
+
+         <div class="backIcon">
+            <a href="/index.html">
+               <i class="fa-solid fa-2xl fa-arrow-left" style="color: #5a5555;"></i>
+            </a>
+         </div>
+
+         <div class="cartIcon">
+            <i class="fa-solid fa-2xl fa-cart-shopping" style="color: #5a5555;"></i>
+            <span class="value">0</span>
+         </div>
+         
+      </div>
+
+      <h1 class="headers title">Our Products</h1>
 
             <section class="productSection"> 
             
             </section>
+
+            <!-- Cart -->
+
+               <section class="cart">
+
+                  <h2 class="cartHeader">Cart</h2>
+
+                  <div class="cartItemsList">
+
+                  </div>
+
+                  <div>
+                     <div class="cartBtns">
+                        <div class="close"><span>CLOSE</span></div>
+                        <div class="checkout">
+                              CHECKOUT
+                        </div>
+                     </div>    
+                  </div>
+               </section>
+
    </container>
 
    <script src='/src/javascript/productList.js'></script>

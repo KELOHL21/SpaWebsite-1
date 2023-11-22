@@ -73,6 +73,32 @@ a{
    align-items: center;
 }
 
+.userInfo{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.userIcons{
+   display: block;
+   margin: 0.5rem;
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .userIcons i{
+   padding: 5px;
+ }
+
+ @media screen and (min-width:750px) {
+   .userIcons{
+     display: none;
+   }
+}
+
 .bookBtn{
   margin-left: 10px;
   margin-right: 10px ;
@@ -104,6 +130,10 @@ a{
 .toggle_btn{
    margin-right: 2rem;
    display: none;
+}
+
+.toggle_btn i:hover{
+   cursor: pointer;
 }
 
 button{
