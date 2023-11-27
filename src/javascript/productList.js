@@ -12,6 +12,9 @@ toggleBtn.onclick = function () {
    : 'fa-solid fa-bars fa-2xl'
 }
 
+
+// ALL CART BELOW
+
 // Add to Cart Functionality
  let iconCart = document.querySelector('.cartIcon');
  let cart = document.querySelector('.cart');

@@ -25,7 +25,7 @@
    width: 65px;
    height: 65px;
    padding: 5px;
-   margin-left:10px;
+   margin-left:20px;
 }
 
 /* Navbar */
@@ -37,7 +37,6 @@
    flex-direction: row;
    align-items: center;
    justify-content: space-between;
-   font-family: 'Bacasime Antique', serif;
    position: fixed;
    z-index: 9999;
 }
@@ -45,17 +44,35 @@
 .navlinks{
    display: flex;
    flex-direction: row;
+   justify-content: space-between;
    align-items: center;
    list-style: none;
    text-decoration: none;
-   font-size: 20px;
-   letter-spacing: 2px;
+   font-size: 16px;
+   letter-spacing: 3px;
    font-weight: 500;
+   text-transform: uppercase;
+}
+
+@media screen and (min-width:850px) {
+   .navlinks{
+     margin: auto;
+   }
+}
+
+@media screen and (min-width:1900px) {
+   .navlinks{
+     margin-left: 15rem;
+     font-size: 18px;
+     letter-spacing: 5px;
+   }
 }
 
 .navlinks li a{
-   padding: 10px;
+   padding: 5px;
    list-style: none;
+   color: #9c8b7b;
+   font-family: 'Ysabeau Infant', sans-serif;
 }
 
 li {
@@ -102,8 +119,9 @@ a{
 .bookBtn{
   margin-left: 10px;
   margin-right: 10px ;
-  padding: 5px;
+  padding: 8px;
   align-items: center;
+  text-transform: uppercase;
   background-color: #8F7D6D;
   color: rgb(255, 255, 255);
   letter-spacing: 2px;
