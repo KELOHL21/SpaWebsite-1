@@ -12,75 +12,6 @@ toggleBtn.onclick = function () {
    : 'fa-solid fa-bars fa-2xl'
 }
 
-// Fetching Products
-
-let products = null;
-fetch('/src/productData/productDetails.json')
-.then(reponse => reponse.json())
-.then(data => {
-   // Putting my data into the products variable that was orginally null
-   products = data;
-   console.log(products);
-   injectData();
-})
-
-// Displaying data
-let dataList = document.querySelector('.productSection');
-let cartList =document.querySelector('.cart');
-
-function injectData(){
-   // creater foreach loop to loop over the products
-
-   products.forEach(product => {
-
-         let newProduct = document.createElement('a');
-         let newCartItem =document.createElement('div');
-         // redirects to the product selected detailed page
-
-         newProduct.href = '/src/pages/productDetails/productDetails.html?id=' + product.id;
-         newProduct.classList.add('productItem');
-
-         newCartItem.href = '/src/pages/productDetails/productDetails.html?id=' + product.id;
-         newCartItem.classList.add('cartItem');
-
-         // injecting the data into html
-         newProduct.innerHTML = `
-            <div>
-                  <img src="${product.img}">
-                  <h2>${product.title}</h2>
-                  <p>${product.price}</p>
-                  <button onclick="addCartBtn(${product.id})" >Add to cart</button>
-            </div>
-         `
-
-         newCartItem.innerHTML =`
-      
-            <div class="cartItem"> 
-
-                     <div class="cartImageContainer">
-                        <img src="${product.img}"> 
-                     </div>
-                     
-                     <div class="cartItemHeader">
-                        <h2>${product.title}</h2>
-                        <p>${product.price}</p>
-                     </div>
-
-                     <div class="content">
-                        <button> - </button>
-                           <span class="amount" >3</span>
-                        <button> + </button>
-                     </div>                   
-         <div>   
-         `
-         // add itemElement to listElement
-         dataList.appendChild(newProduct);
-         cartList.appendChild(newCartItem);
-
-   });
- 
-}
-
 // Add to Cart Functionality
  let iconCart = document.querySelector('.cartIcon');
  let cart = document.querySelector('.cart');
@@ -106,64 +37,183 @@ closeCart.addEventListener("click", () => {
 });
 
 
-// Cart List
+// Fetching Products
+
+let products = null;
+fetch('/src/productData/productDetails.json')
+.then(reponse => reponse.json())
+.then(data => {
+   // Putting my data into the products variable that was orginally null
+   products = data;
+   injectData();
+   addCartToHTML();
+})
+
+// Displaying data
+function injectData(){
+
+   let dataList = document.querySelector('.productSection');
+
+   products.forEach(product => {
+         let newProduct = document.createElement('div');
+         newProduct.classList.add('productItem');
+
+         newProduct.innerHTML = `
+            <div>
+                  <img src="${product.img}">
+                  <h2>${product.title}</h2>
+                  <p>${product.price}</p>
+
+                   <div class="detailBtns">
+                        <button class="infoBtn" onclick="moreInfo(${product.id})" >More Info</button>
+                        <button onclick="addCartBtn(${product.id})">Add to cart</button>
+                   </div>            
+            </div>
+         `;
+
+         dataList.appendChild(newProduct);        
+   });
+}
+
+function moreInfo(productId) {
+   window.location.href = '/src/pages/productDetails/productDetails.html?id=' + productId;
+}
+
+
+// CART
 let listCart = [];
 
-// Checking Cart
-function checkCart(){
-   var cookieValue = document.cookie
-   .split(' ; ')
-   .find(row => row.startsWith('listCart='));
+// Checking Cart cookie data
+function checkCart() {
+   const cookieValue = document.cookie
+      .split('; ')
+      .find(row => row.startsWith('listCart='));
+   
    if (cookieValue) {
       listCart = JSON.parse(cookieValue.split('=')[1]);
+   } else {
+      listCart = [];
    }
-};
-
-// Calling Function
-
+}
 checkCart();
 
 // Adding Items to Cart
 function addCartBtn($idProduct){
-   let productCopy = JSON.parse(JSON.stringify(products));
-   
-   // If not in Cart
-   if (!listCart[$idProduct]) {
-      let dataProduct = productCopy.filter(
-         product => product.id == $idProduct
-      )[0];
-      // Adding data into Cart
-      listCart[$idProduct] = dataProduct;
-      listCart[$idProduct].quantity = 1;
-   }else{
-      listCart[$idProduct].quantity++;
+
+   const existingProduct = listCart.find(product => product.id == $idProduct);
+
+   if (!existingProduct) {
+      const productToAdd = products.find(product => product.id == $idProduct);
+      if (productToAdd) {
+         productToAdd.quantity = 1;
+         listCart.push(productToAdd);
+      }
+   } else {
+      existingProduct.quantity++;
    }
 
-   // Saving in Cookies
-   let timeSave = 'expires=Thu, 31 Dec 2028 23:59:59 UCT';
-   document.cookie = 'listCart='+ JSON.stringify(listCart)+"; "+timeSave+"; path=/;";
-   CartToHTML();
+   addCartToHTML();
+   saveCartToCookie();
+
 };
 
-CartToHTML();
-function  CartToHTML() {
-   // CLEAR COOKIE DATAT DEFAULT
+function saveCartToCookie() {
+   const expiryDate = new Date('Thu, 31 Dec 2025 23:59:59 UTC').toUTCString();
+   document.cookie = `listCart=${JSON.stringify(listCart)}; expires=${expiryDate}; path=/;`;
+}
 
-   let listCartHTML = documenet.querySelector('.listCart');
-   listCart.innerHTML = '';
+function checkCart(){
+   const cookieValue = document.cookie
+      .split('; ')
+      .find(row => row.startsWith('listCart='));
+   
+   if (cookieValue) {
+      listCart = JSON.parse(cookieValue.split('=')[1]);
+   } else {
+      listCart = []; // Set an empty array if the cookie doesn't exist
+   }
+}
+checkCart();
 
-   let totalHTML =document.querySelector('.totalPrice');
+addCartToHTML();
+function  addCartToHTML() {
+
+   // CLEAR COOKIE DATA DEFAULT
+   let listCartHTML = document.querySelector('.cartItemsList');
+
+   listCartHTML.innerHTML = '';
+
+   let totalHTML =document.querySelector('.totalValue');
 
    let totalPrice = 0;
 
    if (listCart) {
       listCart.forEach(product => {
-         if (product) {
+
+         if(product) {
+
             let newCart = document.createElement('div');
-            newCart.classList('item');
-            newCart.innerHTML
+
+            newCart.href = '/src/pages/productDetails/productDetails.html?id=' + product.id;
+            newCart.classList.add('cartItem');
+
+            newCart.innerHTML =`
+                     <div class="cartImageContainer">
+                        <img src="${product.img}"> 
+                     </div>
+                     
+                     <div class="cartItemHeader">
+                        <h2>${product.title}</h2>
+                        <p>${product.price}</p>
+                     </div>
+
+                     <div class="quantity">
+                        <button onclick="changeQuantity(${product.id}, '-')">-</button>
+                        <span class="value">${product.quantity}</span>
+                        <button onclick="changeQuantity(${product.id}, '+')">+</button>
+                    </div>
+                     
+            `
+
+            listCartHTML.appendChild(newCart);
+            totalPrice = totalPrice + product.quantity;
          }
       })
    }
+   totalHTML.innerHTML= totalPrice;
 }
+
+// Quantity Decrease & Increase
+
+function changeQuantity($idProduct, $type){
+   const itemIndex = listCart.findIndex(product => product.id == $idProduct);
+
+   if (itemIndex !== -1) {
+       switch ($type) {
+           case '+':
+               listCart[itemIndex].quantity++;
+               break;
+           case '-':
+               listCart[itemIndex].quantity--;
+
+               if (listCart[itemIndex].quantity <= 0) {
+                   listCart.splice(itemIndex, 1); // Remove item if quantity <= 0
+               }
+               break;
+           default:
+               break;
+       }
+       // Save updated data in the cookie
+       const expiryDate = new Date('Thu, 31 Dec 2025 23:59:59 UTC').toUTCString();
+       document.cookie = `listCart=${JSON.stringify(listCart)}; expires=${expiryDate}; path=/;`;
+
+       // Reload list when window is closed
+       addCartToHTML();
+   } else {
+       console.error('Product not found in cart'); // Handle the scenario where the product isn't found
+   }
+}
+
+
+
 

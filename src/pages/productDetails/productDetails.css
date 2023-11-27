@@ -312,7 +312,7 @@ button{
 /*  Similar Product Display  */
 .detailsContainer{
    z-index: -1;
-   padding-top: 1.5rem;
+   padding-top: 5rem;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -342,9 +342,8 @@ button{
    width: 900px;
    max-width: 90vw;
    text-align: center;
+   padding-top: 5rem;
    margin: auto;
-   margin-top: 2rem;
-   z-index: -1;
 }
 
 .productSection .productItem img{
@@ -376,8 +375,8 @@ button{
 
 .productSection .productItem{
    background-color: whitesmoke;
-   width: 250px;
-   height: 250px;
+   width: 220px;
+   height: 280px;
    padding: 20px;
    border-radius: 20px;
    color: black;
@@ -388,6 +387,7 @@ button{
    text-transform: uppercase;
    padding: 5px;
    letter-spacing: 2px;
+   white-space: nowrap;
 }
 
 .productSection .productItem p{
@@ -407,6 +407,203 @@ button{
    grid-template-columns:repeat(2, 1fr) ;
    z-index: -1;
 }
+}
+
+.detailBtns button{
+   padding: 5px;
+   border: none;
+   border-radius: 5px;
+   width: fit-content;
+   font-size: 10px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+   color: white;
+   background-color:#7c614a;
+   letter-spacing: 1px;
+   white-space: nowrap;
+   margin: auto;
+   margin-top: 1rem;
+}
+
+.detailBtns .infoBtn{
+   background-color: #bda189;
+   color: rgb(255, 255, 255);
+}
+
+.detailBtns{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 100%;
+}
+
+/* Footer */
+.footer_container{
+   width: 100%;
+   height: 50vh;
+   background-color: black;
+   color: white;
+   margin: auto;
+   margin-top: 5rem;
+ }
+
+ .top_footer{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   text-align: center;
+   margin: auto;
+   background-size:cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-clip: border-box;
+ }
+
+ .footer_slogan{
+   white-space: nowrap;
+   transform: rotate(-90deg);
+   transform-origin: left; /* Set the rotation origin to the left */
+   writing-mode:horizontal-tb;
+   align-items: center;
+   justify-content: center;
+   margin-top: 15rem;
+   margin-left: 1.2rem;
+   font-size: 0.6rem;
+   font-weight: bold;
+   letter-spacing: 2px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+ }
+
+ .footer_details{
+   padding-bottom: 12rem;
+   text-align: center;
+   padding: 2rem;
+   margin: auto;
+ }
+
+ .location{
+   text-align: center;
+   margin: 15px;
+   margin-left: -6rem;
+   width: 93%;
+ }
+ .hours{
+   text-align: center;
+   margin: 15px;
+   margin-left: -6rem;
+   width: 93%;
+ }
+
+ .contact{
+   text-align: center;
+   margin: 15px;
+   margin-left: -6rem;
+   width: 93%;
+ }
+
+ .slogan_footer{
+   text-align: left;
+ }
+
+ .footer_header{
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+   font-size: 18px;
+   letter-spacing: 5px;
+   padding: 8px;
+   white-space: nowrap;
+   text-align: center;
+   align-items: center;
+ }
+
+ .location_pin{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+ .week{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+ .weekend{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+ .landline{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+.whatsapp{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+}
+
+.email{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+}
+
+.bottom_footer{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 100%;
+   height: 10vh;
+   background-color: white;
+   color: black;
+   margin-top: 1.8rem;
+}
+
+.copyright{
+   text-transform: uppercase;
+   font-size: 8px;
+   margin: auto;
+   text-align: left;
+   letter-spacing: 2px;
+   font-weight: 800;
+}
+
+.icons{
+   text-transform: uppercase;
+   font-size: 10px;
+   margin: auto;
+}
+
+.icons:hover{
+   cursor: pointer;
+}
+
+.icons i{
+   padding: 2px;
 }
 
 

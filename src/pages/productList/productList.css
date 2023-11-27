@@ -20,7 +20,7 @@
    flex-direction: row;
    align-items: center;
    justify-content: space-between;
-   font-family: 'Bacasime Antique', serif;
+   font-family: 'Ysabeau Infant', sans-serif;
    position: fixed;
    z-index: 9999;
 }
@@ -251,7 +251,7 @@ a{
    padding-top: 2rem;
    padding-bottom: 2rem;
    letter-spacing: 6px;
-   font-family: 'Ysabeau Infant', sans-serif;
+   font-family: 'Bacasime Antique', serif;
    color: #8F7D6D;
 }
 
@@ -263,7 +263,7 @@ a{
 }
 
 .productSection .productItem img{
-      width: 120px;
+      width: 180px;
       height: 150px;
       border-radius: 20px;
       filter: blur(20%);
@@ -274,6 +274,8 @@ a{
    grid-template-columns: repeat(4, 1fr);
    gap: 25px;
    padding: 10px;
+   margin:2.5rem;
+   margin: auto;
    filter:drop-shadow(0 5px 8px #74737369) ;
 }
 
@@ -294,6 +296,7 @@ a{
    text-transform: uppercase;
    padding: 5px;
    letter-spacing: 2px;
+   white-space: nowrap;
 }
 
 .productSection .productItem p{
@@ -314,54 +317,39 @@ a{
 }
 
 .productItem button{
-   padding: 8px;
+   padding: 5px;
    border: none;
    border-radius: 5px;
    width: fit-content;
-   font-size: 15px;
+   font-size: 10px;
    font-family: 'Ysabeau Infant', sans-serif;
    text-transform: uppercase;
    color: white;
-   background-color:#8F7D6D;
-   letter-spacing: 2px;
-   margin-top: 2rem;
+   background-color:#7c614a;
+   letter-spacing: 1px;
+   white-space: nowrap;
+   margin: auto;
+   margin-top: 1rem;
+}
+
+.detailBtns .infoBtn{
+   background-color: #bda189;
+   color: rgb(255, 255, 255);
+}
+
+.detailBtns{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 100%;
 }
 
 /* Cart */
 
-.cart{
-   color: white;
-   position: fixed;
-   top: 0;
-   right: -100%;
-   width: 400px;
-   height: 100vh;
-   align-items: center;
-   background-color: black;
-}
-
-.cartContainer{
-   display: flex;
-   flex-direction: column;
-}
-
-.cartHeader{
-   z-index: 1;
-   padding-top: 4.5rem;
-   width: 100%;
-   height: 7rem;
-   background-color: #8F7D6D;
-   color: white;
-   text-align: left;
-   align-items: center;
-   display: flex;
-   justify-self: center;
-   padding-left: 1rem;
-   left: 0;
-   font-family: 'Ysabeau Infant', sans-serif;
-   letter-spacing: 2px;
-   text-transform: uppercase;
-   font-size: 1.2rem;
+.cartIcon{
+   margin-bottom: 2rem;
+   cursor: pointer;
+   margin-right: 1rem;
 }
 
 .belowNav{
@@ -385,123 +373,304 @@ a{
    cursor: pointer;
 }
 
-.value{
+.totalValue{
    z-index: 1;
-   font-size: x-large;
+   font-size:0.8rem;
    position: relative;
    border-radius:50%;
    transform: translateX(20px);
-   background-color: #e4e4e4f8;
-   width: 30px;
+   background-color:#c5a58a;
+   width: 25px;
    align-items: center; 
+   color: rgb(255, 255, 255);
+   font-weight: 700;
    display: flex;
    margin-top: -2.5rem;
    right: 0;
    justify-content: center;
-   height: 30px;
-   padding: 5px;
+   height: 25px;
+   padding: 2px;
    font-family: 'Ysabeau Infant', sans-serif;
    margin-right: 2rem;
 }
 
-.cartItem{
+.cart{
+   color: #fff;
+   position: fixed;
+   width: 400px;
+   max-width: 80vw;
+   height: 100vh;
+   background-color: #0E0F11;
+   top: 0px;
+   right: -100%;
    display: grid;
-   grid-template-columns: 50px 1fr 70px;
+   grid-template-rows: 50px 1fr 50px;
+   gap: 5px;
+   transition: right 1s;
+}
+
+.cartHeader{
+   color: white;
+   margin-top: 4.6rem;
+   text-align: left;
+   margin-left: 1.8rem;
+   letter-spacing: 3px;
+   text-transform: uppercase;
+   font-family: 'Bacasime Antique', serif;
+}
+
+.cartItemHeader h2{
+   text-align: center;
+   font-size: 15px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+}
+
+.cartItemHeader p{
+   letter-spacing: 3px;
+   font-family: 'Ysabeau Infant', sans-serif;
+}
+
+.cartImageContainer img{
+   width: 85px;
+   height: 85px;
+   border-radius: 20px;
+}
+
+.quantity{
+   display: flex;
+   flex-direction: row;
    align-items: center;
-   gap: 20px;
-   margin-bottom: 20px;
+   font-family: 'Ysabeau Infant', sans-serif;
+}
+
+.quantity button{
+   padding: 5px;
+   margin: 5px;
+   border-radius: 10%;
+   border: none;
+   font-size: 15px;
+   background-color: #aa907a;
+   color: white;
+   font-weight: 700;
+}
+
+.cartItemsList{
+  margin-top: 3rem;
+}
+
+.cartItem{
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   width: 100%;
-   height: 9rem;
-}
-
-.cartItemHeader{
-   width: 100%;
-   font-size: 10px;
-   font-family: 'Ysabeau Infant', sans-serif;
-   text-transform: uppercase;
-   text-align: center;
-}
-
-.content{
-   display: flex;
-   flex-direction: row;
-   text-align: right;
-   justify-content: center;
-   font-family: 'Ysabeau Infant', sans-serif;
-   letter-spacing: 3px;
-}
-
-.content button{
-   padding: 2px;
-   margin-left: 5px;
-   margin-right: 5px;
-   padding-left: 5px;
-   padding-right: 5px;
-   font-size: 15px;
-   border: none;
-   font-weight: bold;
-   background-color: #f7e8dc;
-   text-align: center;
+   flex: 1fr 1fr;
+   color: white;
    align-items: center;
-   border-radius: 2px;
-}
-
-.cartImageContainer{
-   height: 300px;
-   width: 400px;
-   overflow: hidden;
-   padding-top: 6rem;
-   display: flex;
-   justify-content: center;
-}
-
-.cartItem img{
-   float: left;
-   width:  100px;
-   height: 100px;
-   object-fit: cover;
-   padding: 5px;
-   border-radius: 10px;
+   padding-top: 0.5rem;
+   margin: 1rem;
 }
 
 .cartBtns{
-   width: 100%;
    display: flex;
    flex-direction: row;
+   justify-content:space-between;
+   align-items: center;
+   margin: auto;
+   margin-top: 1.3rem;
+}
+
+.close{
+   display: flex;
+   width: 200px;
+   height: 30px;
+   padding-top: 5px;
+   background-color:#836e5d;
+   justify-content: center;
+   letter-spacing: 2px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   cursor: pointer;
+
+}
+
+.checkout{
+   display: flex;
+   width: 200px;
+   height: 30px;
+   padding-top: 5px;
+   background-color: #aa907a;
+   justify-content: center;
+   letter-spacing: 2px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   cursor: pointer;
+}
+
+ /* Footer */
+ .footer_container{
+   width: 100%;
+   height: 50vh;
+   background-color: black;
+   color: white;
+   margin: auto;
+   margin-top: 5rem;
+ }
+
+ .top_footer{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   text-align: center;
+   margin: auto;
+   background-size:cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-clip: border-box;
+ }
+
+ .footer_slogan{
+   white-space: nowrap;
+   transform: rotate(-90deg);
+   transform-origin: left; /* Set the rotation origin to the left */
+   writing-mode:horizontal-tb;
    align-items: center;
    justify-content: center;
-   padding: 0.5rem;
-}
+   margin-top: 15rem;
+   margin-left: 1.2rem;
+   font-size: 0.6rem;
+   font-weight: bold;
+   letter-spacing: 2px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+ }
 
-.cartBtns .close{
-   color: #ffffff;
-   font-size: 15px;
-   font-family: 'Ysabeau Infant', sans-serif; 
-   font-weight: 700;
-   padding: 10px;
-   background-color: #706256;
+ .footer_details{
+   padding-bottom: 12rem;
+   text-align: center;
+   padding: 2rem;
+   margin: auto;
+ }
+
+ .location{
+   text-align: center;
+   margin: 15px;
+   margin-left: -6rem;
+   width: 93%;
+ }
+ .hours{
+   text-align: center;
+   margin: 15px;
+   margin-left: -6rem;
+   width: 93%;
+ }
+
+ .contact{
+   text-align: center;
+   margin: 15px;
+   margin-left: -6rem;
+   width: 93%;
+ }
+
+ .slogan_footer{
+   text-align: left;
+ }
+
+ .footer_header{
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+   font-size: 18px;
+   letter-spacing: 5px;
+   padding: 8px;
+   white-space: nowrap;
+   text-align: center;
+   align-items: center;
+ }
+
+ .location_pin{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
    letter-spacing: 1px;
-   border-radius: 2px;
-   width: 50%;
-   margin-right: 5px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+ .week{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+ .weekend{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+ .landline{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+ }
+
+.whatsapp{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
 }
 
-.cartBtns .checkout{
-   color: #706256;
-   font-family: 'Ysabeau Infant', sans-serif; 
-   font-weight: 700;
-   padding: 10px;
-   background-color: beige;
-   border-radius: 2px;
-   border: none;
-   width: 50%;
-   height: 2.5rem;
+.email{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
+   letter-spacing: 1px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   line-height: 15px;
+}
+
+.bottom_footer{
    display: flex;
+   flex-direction: row;
    justify-content: center;
+   width: 100%;
+   height: 10vh;
+   background-color: white;
+   color: black;
+   margin-top: 1.8rem;
 }
 
+.copyright{
+   text-transform: uppercase;
+   font-size: 8px;
+   margin: auto;
+   text-align: left;
+   letter-spacing: 2px;
+   font-weight: 800;
+}
+
+.icons{
+   text-transform: uppercase;
+   font-size: 10px;
+   margin: auto;
+}
+
+.icons:hover{
+   cursor: pointer;
+}
+
+.icons i{
+   padding: 2px;
+}
 /* font-family: 'Bacasime Antique', serif;
 font-family: 'Ysabeau Infant', sans-serif; */

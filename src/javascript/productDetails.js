@@ -39,6 +39,12 @@ function showProductDetails() {
             <img src="${product.img}">
             <h2>${product.title}</h2>
             <p>${product.price}</p>
+
+            <div class="detailBtns">
+                <button class="infoBtn" onclick="moreInfo(${product.id})" >More Info</button>
+                <button onclick="addCartBtn(${product.id})" >Add to cart</button>
+          </div>     
+
           </div>
         `;
         
