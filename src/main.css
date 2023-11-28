@@ -48,35 +48,44 @@
    align-items: center;
    list-style: none;
    text-decoration: none;
-   font-size: 16px;
+   font-size: 13px;
    letter-spacing: 3px;
    font-weight: 500;
    text-transform: uppercase;
 }
 
-@media screen and (min-width:850px) {
-   .navlinks{
-     margin: auto;
-   }
+
+@media screen and (min-width:900px) {
+   .navlinks {
+      font-size: 16px;
+      margin: auto;
+    }
+    .navlinks li a{
+       margin-left: 0.8rem;
+       margin-right: 1rem;
+    }
 }
 
-@media screen and (min-width:1900px) {
-   .navlinks{
-     margin-left: 15rem;
+@media screen and (min-width:1500px) {
+   .navlinks {
      font-size: 18px;
-     letter-spacing: 5px;
+     margin: auto;
+   }
+   .navlinks li a{
+      margin-left: 2rem;
+      margin-right: 2rem;
    }
 }
 
 .navlinks li a{
-   padding: 5px;
+   padding: 3px;
    list-style: none;
    color: #9c8b7b;
    font-family: 'Ysabeau Infant', sans-serif;
 }
 
-li {
-   padding: 10px;
+li{
+   padding: 5px;
    list-style: none;
 }
 
@@ -181,13 +190,13 @@ button{
 
 .bookBtn2{
    padding: 8px;
-   width: 200px;
+   width: 170px;
    display: flex;
    justify-content: center;
    align-items: center;
    background-color:white;
    font-weight: bold;
-   font-size: 1.5rem;
+   font-size: 1rem;
    color: #5a5555;
    letter-spacing: 2px;
    margin: auto;
@@ -195,6 +204,7 @@ button{
    border-radius: 5px;
    margin-top: 2rem;
    font-family: 'Bacasime Antique', serif;
+   text-transform: uppercase;
  } 
 
  .dropdown a:hover{
@@ -219,7 +229,8 @@ button{
 
 .dropdown li a{
    color: white;
-   font-size: 3rem;
+   font-size: 1.8rem;
+   letter-spacing: 5px;
 }
 
 .dropdownlist{
@@ -251,124 +262,110 @@ button{
 /* Body  */
 
  /* Hero Section */
-section#heroContainer {
-   padding-top: 6rem;
-   height: 600px;
+#heroContainer{
    width: 100%;
-   background-color: black;
-   color: white;
-}
-
-.heroPattern {
-   background-image: url('./assets/img/heroSection.png');
-   background-repeat: no-repeat;
-   background-size: cover;
-   height: 480px;
-   justify-content: center;
-   align-items: center;
-   text-transform: uppercase;
-}
-
-.heroPattern2 {
+   height: 60vh;
+   background-color: whitesmoke;
+   padding-top: 4rem;
    display: flex;
-   justify-content:space-between;
-   align-items: center;
-   text-align: center;
-   width: 100%;
-   padding-top: 10rem;
-}
-
-.heroImg {
-   width: 50px;
-   height: 50px;
-}
-
-.left_side{
-   text-align: left;
-   z-index: 0;
-}
-
-.slogan2{
-   white-space: nowrap;
-   transform: rotate(-90deg);
-   transform-origin: left; /* Set the rotation origin to the left */
-   writing-mode:horizontal-tb;
-   align-items: center;
-   z-index: -1;
-   margin: 18px;
    justify-content: center;
-   margin-top: 15rem;
-   font-size: 0.8rem;
-   color: #FFDAB9;
-   font-weight: bold;
-   letter-spacing: 2px;
 }
 
-.middle{
-   padding-bottom: 12rem;
-   margin-left: -18rem;
-   text-align: left;
+.leftSide{
+   width:100%;
+   background-image: url('./assets/img/banner2.jpg');
+   background-position: center;
+   background-size: cover;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   align-items:center; 
+   justify-content: center;
+   background-repeat: no-repeat;
 }
 
-.title{
-   font-size: 2.5rem;
-   font-weight: lighter;
-   letter-spacing: 10px;
-   margin-left: -5rem;
-}
-
-.slogan{
-   font-family: 'Ysabeau Infant', sans-serif;
-   font-size: 1rem;
-   letter-spacing: 3px;
-   margin-left: -5rem;
-}
-
-.heroImg{
-   width: 500px;
-   height: 450px;
-   margin-top: -6.6rem;
-   margin-left: -30.1rem;
-}
-
-.ctaBtns{
-   align-items: center;
-   margin-top: 15px;
-   text-align: center;
-   margin-left: -9rem;
-}
-
-.ctaBtns button{
-   width: fit-content;
-   height: 29px;
-   padding: 8px;
+.leftSide h1{
+   font-size:4rem;
+   color: whitesmoke;
    font-family: 'Bacasime Antique', serif;
-   font-weight: bold;
-   letter-spacing: 2px;
-   font-size: 12px;
+   letter-spacing: 10px;
+   font-weight: lighter;
+   text-shadow: 4px 4px 3px rgba(0,0,0,0.28);
+}
+
+.leftSide p{
+   font-size: 1.2rem;
+   color: #ffe1c7;
+   font-weight: 700;
+   letter-spacing: 5px;
+   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.425);
+   font-family: 'Ysabeau Infant', sans-serif;
+   margin-top: -0.5rem;
+}
+
+.buttonSide{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   margin-top: 2rem;
+}
+
+.buttonSide button{
+   width: 16rem;
+   height: 2.5rem;
+   margin: 5px;
    border: none;
    border-radius: 5px;
-   margin: 5px;
-   text-transform: uppercase;
+   font-size: 20px;
+   font-family: 'Bacasime Antique', serif;
+   letter-spacing: 3px;
+   padding: 5px;
 }
 
+@media screen and (min-width:700px) {
+   .buttonSide {
+      display: flex;
+      flex-direction: row;
+   }
+}
+
+.buttonSide button:nth-child(1){
+   background-color: #b49d89;
+   color: whitesmoke;
+
+}
+
+.buttonSide button:nth-child(1):hover{
+   border: 1px solid white;
+}
+
+.buttonSide button:nth-child(2){
+   background-color: transparent;
+   border: 1px solid white;
+   color: whitesmoke;
+}
+
+.buttonSide button:nth-child(2):hover{
+   filter: blur(0.7px);
+}
 /* Services */
 
 #serviceContainer{
    height:350px;
    text-align: center;
-   margin: 1rem;
+   margin-top: 30rem;
+   margin-bottom: -6rem;
 }
 
 .headers{
    margin: auto;
-   font-family: 'Bacasime Antique', serif;
-   text-transform: uppercase;
-   font-weight: bold;
-   font-size: 20px;
-   margin-top: 3rem;
+   font-family: 'Ysabeau Infant', sans-serif;
+   font-size: 32px;
+   margin-bottom: 1rem;
    color: #5A5555;
-   letter-spacing: 2px;
+   letter-spacing: 4px;
+   font-weight: 700;
 }
 
 .srvcIcon{
@@ -433,118 +430,121 @@ section#heroContainer {
 }
 
 /* About Section */
+
 #aboutContainer{
-   background-color: rgba(255, 255, 255, 0.5);
-   margin: 0.8rem;
-   border-radius: 10px;
-   margin-top: -7rem;
+   width: 100%;
+   position: relative;
+   margin: auto;
 }
 
-@media screen and (min-width:800px) {
+.aboutContent{
+   background-color: #ffffff;
+   position: absolute; /* Position absolutely within the parent */
+   width: 100%;
+   height: 45vh;
+   z-index: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 5px;
+   border-radius: 2px;
+}
+
+@media screen and (min-width:700px) {
+   .aboutContent{
+      margin-top: -4rem;
+   }
+
    #aboutContainer{
-      margin-left: 3rem;
-      margin-right: 3rem;
+      width: 75%;
+      margin: auto;
+   }
+
+   .line{
+      width: 75%;
    }
 }
 
-.aboutDetails{
-   display: flex;
-   flex-direction: row;
-   justify-self: center;
-   align-items: center;
-   text-align: center;
+@media screen and (min-width:1200px){
+   #aboutContainer{
+      width: 65%;
+      height: 20vh;
+      margin: auto;
+   }
+
 }
 
 .aboutHeader{
-   font-family: 'Bacasime Antique', serif;
-   text-transform: uppercase;
-   font-weight: bold;
-   font-size: 20px;
-   text-align: center;
-   color: #5A5555;
-   letter-spacing: 5px;
-}
-
-.aboutContent h1{
-   padding: 1rem;
    margin: auto;
-   font-size: 20px;
-   letter-spacing: 2px;
-   font-family: 'Bacasime Antique', serif;
-}
-
-.details{
-   padding: 0.3rem;
    font-family: 'Ysabeau Infant', sans-serif;
-   width: 98%;
-   text-align: center;
-   line-height: 20px;
+   font-size: 32px;
    margin-top: -1rem;
-}
-
-.aboutRightSide{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
    margin-bottom: 1rem;
+   color: #5A5555;
+   letter-spacing: 4px;
+   font-weight: 100;
 }
 
-.aboutSlogan{
-   display:none;
+.line{
+   width:85%;
+   height:3px;
+   background-color: #5A5555;
+   border: none;
+   margin-bottom: 15px;
+   padding-top: -1rem;
 }
 
 .aboutLeftSide{
    text-align: center;
-   margin: 0.5rem;
-   font-size: 14px;
+   line-height: 21px;
+}
+
+.details{
    padding-bottom: 1rem;
-}
-
-.abtBtn{
-   padding: 8px;
-   border: none;
-   border-radius: 5px;
-   width: fit-content;
-   font-size: 15px;
+   width: 88%;
+   margin: auto;
    font-family: 'Ysabeau Infant', sans-serif;
-   text-transform: uppercase;
-   color: white;
-   background-color:#B6A18E;
-   margin-top: 1rem;
+   letter-spacing: 2px;
 }
 
-.abtBtn:hover{
-   background-color:#9c8b7b;
-}
 
 /* Shop Section */
 
 #shopContainer{
    text-align: center;
    align-items: center;
+   margin-top: 28rem;
+   position: relative;
+   overflow: hidden;
 }
 
 .shopSlogan{
-   width: 90%;
+   width: 85%;
    margin: auto;
    font-family: 'Ysabeau Infant', sans-serif;
-   text-transform: uppercase;
-   font-size: 10px;
+   /* text-transform: uppercase; */
+   font-size: 16px;
    text-align: center;
    letter-spacing: 2px;
    margin-top: 5px;
-   line-height: 18px;
+   line-height: 30px;
+}
+
+@media screen and (min-width:600px) {
+   .shopSlogan{
+      width: 50%;
+   }
+}
+
+@media screen and (min-width:1300px) {
+   .shopSlogan{
+      width: 30%;
+   }
 }
 
 
 /* Shop Carousel */
-
-#shop_container {
-   padding: 20px;
-   position: relative;
-   overflow: hidden;
-}
 
 .productContainer{
    padding: 0 2vw;
