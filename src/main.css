@@ -3,6 +3,7 @@
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+   scroll-behavior: smooth;
 }
 
 .mainBody{
@@ -265,14 +266,14 @@ button{
 #heroContainer{
    width: 100%;
    height: 60vh;
-   background-color: whitesmoke;
+   background-color: rgb(255, 255, 255);
    padding-top: 4rem;
    display: flex;
    justify-content: center;
 }
 
 .leftSide{
-   width:100%;
+   width:98%;
    background-image: url('./assets/img/banner2.jpg');
    background-position: center;
    background-size: cover;
@@ -282,6 +283,12 @@ button{
    align-items:center; 
    justify-content: center;
    background-repeat: no-repeat;
+}
+
+@media screen and (min-width:700px){
+   .leftSide{
+      width: 100%;
+   }
 }
 
 .leftSide h1{
@@ -352,10 +359,10 @@ button{
 /* Services */
 
 #serviceContainer{
-   height:350px;
+   height:600px;
    text-align: center;
-   margin-top: 30rem;
-   margin-bottom: -6rem;
+   margin-top: 5rem;
+   margin-bottom: 1rem;
 }
 
 .headers{
@@ -368,66 +375,7 @@ button{
    font-weight: 700;
 }
 
-.srvcIcon{
-   width: 40px;
-   height:40px;
-   margin: 15px;
-}
 
-@media screen and (min-width:600px) {
-   .srvcIcon{
-      width: 60px;
-      height:60px;
-      padding: 10px;
-      margin: 1rem;
-   }
-}
-
-.serviceIcons{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-
-.serviceIcons p{
-   font-family: 'Ysabeau Infant', sans-serif;
-   color: #5A5555;
-   text-transform: uppercase;
-   margin-top: -0.5rem;
-   font-size:10px;
-   font-weight: 800;
-}
-
-@media screen and  (min-width:600px){
-   .serviceIcons p{
-      font-size: 16px;
-   }
-}
-
-.serviceIconGroup{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-}
-
-.srvcBtn{
-   padding: 8px;
-   border: none;
-   border-radius: 5px;
-   width: fit-content;
-   font-size: 15px;
-   font-family: 'Ysabeau Infant', sans-serif;
-   text-transform: uppercase;
-   color: white;
-   background-color:#8F7D6D ;
-   letter-spacing: 2px;
-   margin-top: 2rem;
-}
-
-.srvcBtn a{
-   color: white;
-}
 
 /* About Section */
 
@@ -451,13 +399,31 @@ button{
    border-radius: 2px;
 }
 
+.productBtn{
+   padding: 8px;
+   border: none;
+   border-radius: 5px;
+   width: fit-content;
+   font-size: 15px;
+   font-family: 'Ysabeau Infant', sans-serif;
+   text-transform: uppercase;
+   color: white;
+   background-color:#8F7D6D ;
+   letter-spacing: 2px;
+   margin-top: 2rem;
+} 
+
+.productBtn a{
+   color: white;
+} 
+
 @media screen and (min-width:700px) {
    .aboutContent{
       margin-top: -4rem;
    }
 
    #aboutContainer{
-      width: 75%;
+      width: 85%;
       margin: auto;
    }
 
@@ -468,7 +434,7 @@ button{
 
 @media screen and (min-width:1200px){
    #aboutContainer{
-      width: 65%;
+      width: 75%;
       height: 20vh;
       margin: auto;
    }
@@ -481,7 +447,7 @@ button{
    font-size: 32px;
    margin-top: -1rem;
    margin-bottom: 1rem;
-   color: #5A5555;
+   color: #4e4a4a;
    letter-spacing: 4px;
    font-weight: 100;
 }
@@ -489,7 +455,7 @@ button{
 .line{
    width:85%;
    height:3px;
-   background-color: #5A5555;
+   background-color: #8F7D6D;
    border: none;
    margin-bottom: 15px;
    padding-top: -1rem;
@@ -508,32 +474,29 @@ button{
    letter-spacing: 2px;
 }
 
-
-/* Shop Section */
-
+/* Shop */
 #shopContainer{
    text-align: center;
    align-items: center;
-   margin-top: 28rem;
    position: relative;
-   overflow: hidden;
-}
 
+}
 .shopSlogan{
    width: 85%;
    margin: auto;
    font-family: 'Ysabeau Infant', sans-serif;
    /* text-transform: uppercase; */
-   font-size: 16px;
+   font-size: 17px;
    text-align: center;
    letter-spacing: 2px;
    margin-top: 5px;
-   line-height: 30px;
+   margin-bottom: 2rem;
+   line-height: 28px;
 }
 
 @media screen and (min-width:600px) {
    .shopSlogan{
-      width: 50%;
+      width: 65%;
    }
 }
 
@@ -541,90 +504,6 @@ button{
    .shopSlogan{
       width: 30%;
    }
-}
-
-
-/* Shop Carousel */
-
-.productContainer{
-   padding: 0 2vw;
-   display: flex;
-   overflow-x: auto;
-   scroll-behavior: smooth; 
-}
-
-.container1{
-   padding-top: -1rem;
-}
-
-/* Massage Oil Container */
-.container2{
-   padding-top: -1rem;
-}
-
-.container3{
-   padding-top: -2rem;
-}
-
-.productContainer::-webkit-scrollbar{
-   display: none;
-}
-
-.productContainer.auto-scroll {
-  scroll-behavior: smooth;
-  overflow-x: scroll;
-}
-
-.productCard{
-   flex: 0 0 auto;
-   width: 250px;
-   height: 465px;
-   margin-right: 40px;
-   margin-top: 3rem;
-   background-color: rgba(255, 255, 255, 0.7);
-   margin-bottom: 15px;
-   border-radius:10px;
-}
-
-.productThumb{
-   width: 200px;
-   height: 200px;
-   max-width: 100%;
-   border-radius: 10%;
-   object-fit: cover;
-}
-
-.productImgContainer{
-   position: relative;
-   width: 200px;
-   height: 200px;
-   display: inline-block;
-}
-
-.productSize {
-   position: absolute;
-   bottom: 0.5rem; /* Adjust this value as needed */
-   left: 72%;
-   transform: translateX(-50%);
-   background-color: #5a55556c;
-   width: 98px;
-   height: fit-content;
-   color: white;
-   border-radius: 10px;
-   height: 2.2rem;
-   letter-spacing: 2px;
-   padding: 10px;
-   text-align: center;
-   text-transform: uppercase;
-   font-size: 12px;
-   font-weight: bold;
-   font-family: 'Ysabeau Infant', sans-serif;
-   z-index: 1;
-}
-
-.size1{
-   left: 60%;
-   width: 150px;
 }
 
 .productHeader{
@@ -635,31 +514,6 @@ button{
    font-family: 'Ysabeau Infant', sans-serif;
    text-transform: uppercase;
    align-items: center;
-}
-
-.infoCollection{
-   padding-top: 1rem;
-}
-
-.collectionOil{
-   padding-top: 2.6rem;
-}
-
-.header1{
-   margin: 0.2rem;
-}
-
-.header2{
-   margin: 1rem;
-}
-
-.header3{
-   margin: 1rem;
-}
-
-.productInfo{
-   display: flex;
-   flex-direction: column;
 }
 
 .productDescription{
@@ -673,104 +527,111 @@ button{
    padding-left: 10px;
    padding-top: 8px;
 }
+a{
+   text-decoration: none;
+   color: rgb(87, 77, 77);
+}
 
-.productPrice{
+
+.title{
+   font-size: xx-large;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+   letter-spacing: 6px;
+   font-family: 'Bacasime Antique', serif;
+   color: #8F7D6D;
+}
+
+.productListContainer{
+   width: 1200px;
+   margin: auto;
+   max-width: 90vw;
+   transition: 1s;
+}
+
+.productSection .productItem img{
+      width: 180px;
+      height: 150px;
+      border-radius: 20px;
+      filter: blur(20%);
+}
+
+.productSection{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
+   padding: 10px;
+   margin:2rem;
+   margin: auto;
+   filter:drop-shadow(0 5px 8px #74737369);
+   align-items: center;
+}
+
+.productSection .productItem:hover{
+   filter: drop-shadow(0 8px 7px #1e1e1e69);
+   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+   transition: ease-in-out;
+}
+
+.productSection .productItem{
+   background-color: whitesmoke;
+   padding: 15px;
+   border-radius: 20px;
+}
+
+.productSection .productItem h2{
+   font-size: 12px;
+   text-transform: uppercase;
+   padding: 5px;
+   letter-spacing: 2px;
+   white-space: nowrap;
+}
+
+.productSection .productItem p{
+   letter-spacing: 2px;
+   padding-top: 15px;
+}
+
+@media screen and (max-width:992px) {
+   .productSection{
+      grid-template-columns:repeat(3, 1fr) ;
+   }
+}
+
+@media screen and (max-width:768px) {
+   .productSection{
+      grid-template-columns:repeat(2, 1fr) ;
+   }
+}
+
+.productItem button{
+   padding: 5px;
+   border: none;
+   border-radius: 5px;
+   width: fit-content;
+   font-size: 10px;
    font-family: 'Ysabeau Infant', sans-serif;
    text-transform: uppercase;
-   align-items: center;
-   text-align:right;
-   margin: 5px;
-   padding: 10px;
-   color: #5A5555;
-   font-size: 18px;
+   color: white;
+   background-color:#7c614a;
+   letter-spacing: 1px;
+   white-space: nowrap;
+   margin: auto;
+   margin-top: 1rem;
 }
 
-.price3{
-   margin-top: 2.2rem;
+.detailBtns .infoBtn{
+   background-color: #bda189;
+   color: rgb(255, 255, 255);
 }
 
-.actionBtns{
+.detailBtns{
    display: flex;
    flex-direction: row;
-   justify-content: space-evenly;
-}
-
-.addBtn{
-   background-color:#B6A18E ;
-   padding: 8px;
-   font-size: 13px;
-   font-family: 'Ysabeau Infant', sans-serif;
-   text-transform: uppercase;
-   align-items: center;
-   border: none;
-   border-radius: 10px;
-   color: white;
-   margin-bottom: 10px;
-}
-
-.addBtn:hover{
-   background-color:#C8AB92;
-   cursor: pointer;
-   color: black;
-}
-
-.moreInfoBtn{
-   background-color:#C8AB92 ;
-   padding: 8px;
-   font-size: 13px;
-   font-family: 'Ysabeau Infant', sans-serif;
-   text-transform: uppercase;
-   align-items: center;
-   border: none;
-   border-radius: 10px;
-   margin-bottom: 10px;
-}
-
-
-.moreInfoBtn:hover{
-   background-color:#B6A18E;
-   cursor: pointer;
-   color: black;
-}
-
-.function_btn{
-   position: relative;
-}
-
-.pre_btn,
-.next_btn{
-   border: none;
-   width: 10vw;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   display: flex;
    justify-content: center;
-   margin-top: 15rem;
-   align-items: center;
-   background: linear-gradient(90deg, rgba(175, 18, 18, 0) 0%, #C8AB92 100%); /* Corrected color value */
-   cursor: pointer;
-   z-index: 9;
- }
- 
-.pre_btn{
-   left: 0;
-   transform: rotate(180deg);
+   width: 100%;
 }
 
-.next_btn{
-   right: 0;
-}
-
-.pre_btn img,
-.next_btn img{
-   opacity: 0.5;
-}
-
-.pre_btn img:hover,
-.next_btn img:hover{
-   opacity: 1.5;
-}
 
  /* Service + Delivery Section */
 #valuesContainer{
@@ -1094,6 +955,15 @@ input {
    background-clip: border-box;
  }
 
+ @media screen and (min-width:800px) {
+   .footer_details{
+      display:flex;
+      flex-direction:row;
+      justify-content: space-around;
+
+   }
+ }
+
  .footer_slogan{
    white-space: nowrap;
    transform: rotate(-90deg);
@@ -1239,6 +1109,36 @@ input {
 .icons i{
    padding: 2px;
 }
+
+/* @media screen and (min-width:500px) {
+    .productSection{
+      width: 85%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: auto;
+   }
+
+   #shopContainer{
+     margin-top: 2rem;
+   }
+   
+   .productSection .productItem img{
+      width: 80%;
+   }
+/*
+   
+
+   .productItem button{
+      margin: ;
+   }
+
+   .detailBtns button{
+     width: 8rem;
+     height: 3rem;
+     font-size: 0.8rem;
+   } */
+} */
+
 
 /* font-family: 'Bacasime Antique', serif;
 font-family: 'Ysabeau Infant', sans-serif; */

@@ -85,5 +85,13 @@
             "description":"100ml Cleanser, 50ml Moisturiser and FREE 100ml Toner with 25% off Microfiber Cloth.Everything you need for clear skin..",
             "price":"R300.00",
             "img":"/src/assets/productImg/cleansingKit.png"
+         },
+         {
+            "id":12,
+            "title":"Aromatherapy Candles",
+            "description":"Made using pure essential oil blends carefully made to provide health benefits and a wellbeing boost. Our aromatherapy candles can boost your mood, increase energy, help sleep, reduce stress and much more!",
+            "price":"R180.00",
+            "size":"190g ",
+            "img":"/src/assets/productImg/scentedCandles.webp"
          }
    ]
