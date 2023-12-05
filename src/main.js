@@ -12,8 +12,10 @@ toggleBtn.onclick = function () {
    : 'fa-solid fa-bars fa-2xl'
 }
 
-// Fetching Products
+// ----------------------------------------------------
 
+// Shop Section
+// Fetching Products
 let products = null;
 fetch('/src/productData/productDetails.json')
 .then(reponse => reponse.json())
@@ -31,6 +33,7 @@ function injectData() {
 
    firstSixProducts.forEach(product => {
       let newProduct = document.createElement('div');
+
       newProduct.classList.add('productItem');
 
       newProduct.innerHTML = `
@@ -52,6 +55,54 @@ function injectData() {
       dataList.appendChild(newProduct);
    });
 }
+
+
+
+// ----------------------------------------------------
+
+// Service Section
+// Fetching Products
+let services = null;
+fetch('/src/serviceData/srvData,.json')
+.then(reponse => reponse.json())
+.then(data => {
+   // Putting my data into the products variable that was orginally null
+   services = data;
+   injectServiceData();
+   // addCartToHTML();
+})
+
+// Displaying data
+function injectServiceData() {
+   let serviceContainer = document.querySelector('.srvListContainer');
+   let firstFourServices =services.slice(0, 4); // Corrected to iterate through the first 4 products
+ 
+   firstFourServices.forEach(service => {
+     let newService = document.createElement('div');
+     newService.classList.add('srvItemContainer');
+ 
+     newService.innerHTML = `
+       <div class="srvImgContainer">
+         <img class="srvImg" src="${service.image}">
+       </div>
+ 
+       <div class="srvDetails">
+         <div>
+           <h2>${service.title}</h2>
+           <p>${service.description}</p>
+           <p>${service.price}</p>
+         </div>
+         
+         <div class="selectBooking">
+           <button>Book Now</button>
+         </div>
+       </div>
+     `;
+ 
+     serviceContainer.appendChild(newService);
+   });
+ }
+ 
 
 
 

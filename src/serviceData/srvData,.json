@@ -1,0 +1,58 @@
+[
+   {
+      "id":1,
+      "title":"Brow Tinting & Laminating",
+      "description":"Brow laminating and tinting has been a popular beauty procedure in recent years. To reshape and put brow hairs in place, we use a very delicate perming lotion that is cysteamine and thioglycolic-free, giving them a fuller and more defined appearance without compromising or damaging them.",
+      "price":"R550 - R650",
+      "image":"/src/assets/srvImg/brow_tinting.jpg"
+   },
+   {
+      "id":2,
+      "title":"Facials",
+      "description":"A complete selection of preventative and reparative skin care treatments to keep your skin looking young and healthy. Come in for a treatment and let one of our highly trained therapists select the best one for you.",
+      "price":"R150 - R950",
+      "image":"/src/assets/srvImg/facial.jpg"
+   },
+   {
+      "id":3,
+      "title":"Threading",
+      "description":"We are popluar within Cape Town for our quality of work which is carried out by amazingly skilled technicians who are not only qualified, but are experienced as well. The final product of threading are brows that are meticulously and accurately shaped and hold their shape longer than other hair removal techniques..",
+      "price":"R150 - R200",
+      "image":"/src/assets/srvImg/brow_treading.jpg"
+   },
+   {
+      "id":4,
+      "title":"Laser Removal",
+      "description":"We take pleasure in being the greatest laser hair removal clinic in the Cape Town area, having used several technologies to provide our clients the world's best technology, which produces long-lasting and effective results.",
+      "price":"R550 - R950",
+      "image":"/src/assets/srvImg/laser_removal.jpg"
+   },
+   {
+      "id":5,
+      "title":"Pedicures",
+      "description":"You may choose two different treatments from our selection when you purchase our Pedicure Kit. Using premium ingredients in a professional atmosphere, our spa offers salon treatments that you may enjoy. Treat your toes with our expertly crafted, high-quality tools for consistently distinctive and perfect results..",
+      "price":"R150 - R950",
+      "image":"/src/assets/srvImg/pedicure.jpg" 
+   },
+   {
+      "id":6,
+      "title":"Various Massages",
+      "description":" We specialize in a range of massage therapy treatments aimed at renewing both mind and body since you deserve the finest both inside and out.While we specialize in Thai Bodywork, we also offer both eastern and western styled massage to meet a variety of requirements and desires.",
+      "price":"R550 - R1050",
+      "image":"/src/assets/srvImg/massage.jpg"
+   },
+   {
+      "id":7,
+      "title":"Manicures",
+      "description":"Experience the ultimate in luxury with our Manicure set choosing 4 of a variety fo tretaments. Enjoying a salon-grade treatment offering a sophisticated atmosphere with its premium quality materials. Pamper your nails with our professional-grade, finely crafted tools, delivering an exclusive and impeccable finish every time.",
+      "price":"R100 - R650",
+      "image":"/src/assets/srvImg/brow_tinting.jpg"
+   },
+   {
+      "id":8,
+      "title":"Waxing",
+      "description":"We guarantee that our wax treatments will exceed your expectations. Because of the high level of personalization available with this service, each customer may achieve the results they need without compromising anything.Customers may be certain that our attractive, tidy, and private home base studio will provide their maximum comfort, as this service is known for providing exceptional results.",
+      "price":"R150 - R750",
+      "image":"/src/assets/srvImg/waxing.jpg"
+   }
+]

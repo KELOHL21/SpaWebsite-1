@@ -3,7 +3,6 @@
    box-sizing: border-box;
    margin: 0;
    padding: 0;
-   scroll-behavior: smooth;
 }
 
 .mainBody{
@@ -109,7 +108,7 @@ a{
 
 .userIcons{
    display: block;
-   margin: 0.5rem;
+   margin: 0.10;
    display: flex;
    flex-direction: row-reverse;
    justify-content: center;
@@ -127,8 +126,7 @@ a{
 }
 
 .bookBtn{
-  margin-left: 10px;
-  margin-right: 10px ;
+  margin: 1rem;
   padding: 8px;
   align-items: center;
   text-transform: uppercase;
@@ -285,27 +283,21 @@ button{
    background-repeat: no-repeat;
 }
 
-@media screen and (min-width:700px){
-   .leftSide{
-      width: 100%;
-   }
-}
-
 .leftSide h1{
    font-size:4rem;
-   color: whitesmoke;
+   color: #C8AB92;
    font-family: 'Bacasime Antique', serif;
    letter-spacing: 10px;
    font-weight: lighter;
-   text-shadow: 4px 4px 3px rgba(0,0,0,0.28);
+   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.788);
 }
 
 .leftSide p{
-   font-size: 1.2rem;
-   color: #ffe1c7;
+   font-size: 1.5rem;
+   color: #ffffff;
    font-weight: 700;
-   letter-spacing: 5px;
-   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.425);
+   letter-spacing: 2px;
+   text-shadow: 2px 2px 2px rgba(88, 88, 88, 0.89);
    font-family: 'Ysabeau Infant', sans-serif;
    margin-top: -0.5rem;
 }
@@ -354,27 +346,260 @@ button{
 }
 
 .buttonSide button:nth-child(2):hover{
-   filter: blur(0.7px);
+   filter: blur(0.8px);
 }
 /* Services */
 
-#serviceContainer{
-   height:600px;
+ .serviceContainer{
+   width: 100%;
+   height: 50vh;
    text-align: center;
-   margin-top: 5rem;
-   margin-bottom: 1rem;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 }
 
-.headers{
-   margin: auto;
-   font-family: 'Ysabeau Infant', sans-serif;
-   font-size: 32px;
-   margin-bottom: 1rem;
-   color: #5A5555;
-   letter-spacing: 4px;
+.srvBox{
+   width: 100%;
+   height: 40vh;
+   display: flex;
+   justify-content: center;
+}
+
+.srvDecription{
+   width: 90%;
+   font-size: 22px;
+   line-height: 28px;
+   font-family: 'Bacasime Antique', serif;
+   color: #6b4a2ef1;
+   margin: 1rem;
    font-weight: 700;
+   text-align: center;
+   margin: auto;
 }
 
+.srvListContainer{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-top: 2rem;
+   width: 100%;
+}
+
+.srvItemContainer{
+   display:flex;
+   flex-direction: column;
+   background-color: whitesmoke;
+   width: 100%;
+}
+
+.srvImgContainer{
+   width: 100%;
+   height: 300px;
+}
+
+.srvImg{
+   width: 100%;
+   height: 300px;
+   object-fit: cover;
+}
+
+.selectBooking{
+   margin: auto;
+   padding: 10px;
+}
+
+.selectBooking button{
+   padding: 12px;
+   width: 9rem;
+   font-size: 12px;
+   font-family: 'Bacasime Antique', serif;
+   font-weight: 700;
+   text-transform: uppercase;
+   border: none;
+   background-color: #aa9582cc;
+   color: white;
+   border-radius: 5px;
+}
+
+.selectBooking button:hover{
+   background-color: #aa9582f1;
+}
+
+.srvHeader{
+   font-family: 'Ysabeau Infant', sans-serif;
+   font-size: 35px;
+   margin-top: -1rem;
+   margin-bottom: 1rem;
+   color:rgb(238, 238, 238);
+   letter-spacing: 4px;
+   font-weight: 500;
+   text-align: center;
+   margin: auto;
+   margin-top: 5rem;
+   letter-spacing: 3px;
+}
+
+.srvDetails{
+   text-align: center;
+   align-items: center;
+   margin: 2.5rem;
+   color: #8F7D6D;
+}
+
+.srvItemContainer{
+   margin-top: -0.1rem;
+   display: flex;
+   flex-direction: column-reverse;
+}
+
+.moreSrvBtn{
+   padding: 12px;
+   width: 10rem;
+   border: none;
+   background-color:white ;
+   display: flex;
+   justify-items: center;
+   margin: auto;
+   margin-top: 2rem;
+   border-radius: 5px;
+}
+
+.moreSrvBtn:hover{
+   border: 1px solid #ffffffcc ;
+   transition: ease-in;
+}
+
+.moreSrvBtn a{
+   align-items: center;
+   text-align: center;
+   margin: auto;
+   font-size: 12px;
+   font-family: 'Bacasime Antique', serif;
+   font-weight: 700;
+   text-transform: uppercase;
+   border-radius: 3px;
+   color: #aa9582cc;
+   letter-spacing: 3px;
+}
+
+.srvDetails h2{
+   width: 75%;
+   font-size: 33px;
+   margin: auto;
+   font-family: 'Bacasime Antique', serif;
+}
+
+.srvDetails p{
+   font-family: 'Ysabeau Infant', sans-serif;
+   font-size: 15px;
+   width: 95%;
+   text-align: center;
+   align-items: center;
+   margin: auto;
+   letter-spacing: 2px;
+   line-height: 20px;
+   padding: 15px;
+}
+
+@media screen and (min-width:600px) {
+   .srvDecription{
+      padding: 2rem;
+      width: 80%;
+      line-height: 28px;
+      font-size: 20px;
+   }
+}
+
+@media screen and (min-width:750px) {
+
+   .srvItemContainer{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+      width: 100%;
+      height: 465px;
+   }
+
+   .srvDecription{
+      padding: 2rem;
+      width: 75%;
+      line-height: 35px;
+      font-size: 22px;
+      letter-spacing: 2px;
+   }
+
+    .srvImgContainer{
+      width: 50vw;
+      height: 50vh;
+   } 
+
+   .srvImg{
+      width: 49.1vw;
+      height: 50vh;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+   }
+
+   .srvItemContainer:nth-child(2){
+      display: flex;
+      flex-direction: row-reverse;
+   }
+
+   .srvItemContainer:nth-child(4){
+      display: flex;
+      flex-direction: row-reverse;
+   }
+
+   .srvItemContainer:nth-child(6){
+      display: flex;
+      flex-direction: row-reverse;
+   }
+
+   .srvItemContainer:nth-child(8){
+      display: flex;
+      flex-direction: row-reverse;
+   }
+
+   .srvDetails h2:nth-child(1){
+      font-size: 30px;
+   }
+} 
+
+
+
+@media screen and (min-width:1200px){
+
+   .srvDecription{
+      width: 55%;
+      font-size: 22px;
+      line-height: 38px;
+   }
+
+   .srvDetails p:nth-child(2){
+      width: 65%;
+      font-size: 16px;
+      line-height: 25px;
+   }
+
+   .srvDetails p:nth-child(3){
+      font-size: 28px;
+   }
+
+   .srvDetails h2:nth-child(1){
+      font-size: 40px;
+   }
+
+   .srvImg{
+      width: 49.5vw;
+      object-position: center;
+   }
+
+} 
 
 
 /* About Section */
@@ -397,6 +622,7 @@ button{
    align-items: center;
    padding: 5px;
    border-radius: 2px;
+   box-shadow:  10px 10px 10px rgba(0, 0, 0, 0.295);
 }
 
 .productBtn{
@@ -432,15 +658,6 @@ button{
    }
 }
 
-@media screen and (min-width:1200px){
-   #aboutContainer{
-      width: 75%;
-      height: 20vh;
-      margin: auto;
-   }
-
-}
-
 .aboutHeader{
    margin: auto;
    font-family: 'Ysabeau Infant', sans-serif;
@@ -450,6 +667,7 @@ button{
    color: #4e4a4a;
    letter-spacing: 4px;
    font-weight: 100;
+   text-shadow:  2px 2px 2px rgba(0, 0, 0, 0.6);;
 }
 
 .line{
@@ -475,12 +693,22 @@ button{
 }
 
 /* Shop */
-#shopContainer{
+#shopContainer {
    text-align: center;
-   align-items: center;
    position: relative;
-
-}
+   /* Margin for larger screens */
+   padding-top: 28rem;
+ }
+ 
+ @media screen and (min-width:1200px) {
+   #shopContainer {
+     /* Reset margin for smaller screens */
+     margin-top: 15rem;
+     /* Apply padding for smaller screens */
+     padding-top: 0;
+   }
+ }
+ 
 .shopSlogan{
    width: 85%;
    margin: auto;
@@ -489,21 +717,10 @@ button{
    font-size: 17px;
    text-align: center;
    letter-spacing: 2px;
-   margin-top: 5px;
+   margin-top: 1rem;
    margin-bottom: 2rem;
    line-height: 28px;
-}
-
-@media screen and (min-width:600px) {
-   .shopSlogan{
-      width: 65%;
-   }
-}
-
-@media screen and (min-width:1300px) {
-   .shopSlogan{
-      width: 30%;
-   }
+   color: whitesmoke;
 }
 
 .productHeader{
@@ -521,12 +738,13 @@ button{
    text-transform: uppercase;
    align-items: center;
    text-align:center;
-   color: #5A5555;
+   color: #ffffffd7;
    font-size: 11px;
    padding-right: 10px;
    padding-left: 10px;
    padding-top: 8px;
-}
+} 
+
 a{
    text-decoration: none;
    color: rgb(87, 77, 77);
@@ -558,8 +776,8 @@ a{
 
 .productSection{
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 20px;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 10px;
    padding: 10px;
    margin:2rem;
    margin: auto;
@@ -575,8 +793,8 @@ a{
 
 .productSection .productItem{
    background-color: whitesmoke;
-   padding: 15px;
-   border-radius: 20px;
+   padding: 10px;
+   border-radius: 15px;
 }
 
 .productSection .productItem h2{
@@ -592,15 +810,11 @@ a{
    padding-top: 15px;
 }
 
-@media screen and (max-width:992px) {
+@media screen and (min-width:950px) {
    .productSection{
-      grid-template-columns:repeat(3, 1fr) ;
-   }
-}
-
-@media screen and (max-width:768px) {
-   .productSection{
-      grid-template-columns:repeat(2, 1fr) ;
+      display: grid;
+       grid-template-columns:repeat(3, 1fr) ;
+       margin: auto; 
    }
 }
 
@@ -637,6 +851,8 @@ a{
 #valuesContainer{
    margin-top: 5rem;
    margin-bottom: 2rem;
+   align-items: center;
+   display: flex;
    justify-content: center;
 }
 
@@ -665,8 +881,18 @@ a{
    text-transform: uppercase;
    align-items: center;
    color: #5A5555;
+   width: 300px;
+   line-height: 20px;
 }
 
+.valueinfoContainer{
+   width: 320px;
+   height: 200px;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+}
 
 .cashBack{
    display: flex;
@@ -676,6 +902,8 @@ a{
    align-items: center;
    line-height: 18px;
    padding-top: 1rem;
+   width: 200px;
+   height: fit-content;
 }
 
 .delivery{
@@ -685,6 +913,7 @@ a{
    align-items: center;
    line-height: 18px;
    margin-top: 1rem;
+   width: 300px;
 }
 
 .security{
@@ -695,145 +924,150 @@ a{
    align-items: center;
    line-height: 18px;
    padding-top: 1rem;
+   width: 300px;
 }
 
-@media (min-width:600px) and (max-width:1200px){
-   .delivery{
-      width: 60%;
-      padding-top: 0;
-   }
-   .security{
-      margin: 0;
-      width: 60%;
-   }
-   .cashBack{
-      margin: 0;
-      width: 80%;
-   }
-}
-
-@media screen and (min-width:1200px) {
-   .cashBack{
-      width: 70%;
-   }
-}
 
 /* Contact Section */
 
 #contactContainer{
-   display: flex;
-   flex-direction: column;
-   margin: auto;
-   text-align: center;
-   align-items: center;
-   background-color: rgba(255, 255, 255, 0.7);
-   width: 88%;
-   border-radius: 5px;
-   height: 52vh;
-   margin-bottom: 1rem;
-   padding: 1rem;
+ display: grid;
+ grid-template-rows: repeat(2, 1fr);
+ row-gap: 15px;
+ align-items: center;
+ text-align: center;
+ width: 100%;
+ height: 70vh;
+ margin: auto;
+ margin-top: 10rem;
+ /* background-color: green; */
 }
 
-.contactSwirl{
-   background-image: url('./assets/img/contactSpiral2.png');
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size:cover;
+#contactContainer div{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.contactDetails{
    width: 100%;
-   height: 100%;
+   margin: auto;
+}
+
+.contactDetails h2{
+   font-size: 12px;
+   text-transform: uppercase;
+   padding-bottom: 0.2rem;
+   letter-spacing: 1px;
+   color: #7a6d62d3;
+   padding-left: 0.5rem;
+   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.151);
 }
 
 .contactHeader{
-   font-family: 'Bacasime Antique', serif;
-   text-transform: uppercase;
-   font-weight: bold;
-   font-size: 20px;
-   margin: 1rem;
-   color: #5A5555;
-   letter-spacing: 5px;
+   font-size: 30px;
+   color: #473f38d3;
+   letter-spacing: 1px;
+   padding: 0.5rem;
+   margin-top: -0.5rem;
+   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.123);
 }
 
 .contactsubHeader{
-   margin:auto ;
-   color: #8F7D6D;
-   text-transform: uppercase;
-   width: 70%;
-   filter: drop-shadow(2px 1px 1px rgba(255, 255, 255, 0.747));
-   font-size: 10px;
-   letter-spacing: 3px;
-   padding: 10px;
-   margin-top: -1rem;
-   line-height: 15px;
-   font-weight: bold;
+   width: 65%;
+   padding-left: 0.6rem;
+   color: rgba(255, 255, 255, 0.938);
+   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+   font-size: 14px;
+   text-align: justify;
+   letter-spacing: 2px;
+   margin: auto;
 }
 
-/* Form */
-.contactForm {
+.allInfo{
+   margin-top: 1rem;
+}
+
+.contact_location h3{
+   font-size: 16px;
+   padding-left: 0.5rem;
+   margin: 5px;
+   color: #473f38d3;
+   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.123)
+}
+
+.contact_location p{
+   font-size: 14px;
+   padding-left: 1rem;
+   color: rgba(255, 255, 255, 0.938);
+   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.otherDetails{
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    justify-content: center;
-   margin: 0 auto;
+}
+
+.cnt_line{
+   width: 5rem;
+   height: 2px;
+   background-color: #4e4a4a;
+   transform: rotate(-90deg);
+   transform-origin: left; /* Set the rotation origin to the left */
+   writing-mode:horizontal-tb;
+}
+
+.contact_times h3{
+   font-size: 16px;
+   padding-left: 0.5rem;
+   margin: 5px;
+   text-align: left;
+   color: #473f38d3;
+   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.123)
+}
+
+.contact_times p{
+   font-size: 14px;
+   padding-left: 1rem;
+   color: rgba(255, 255, 255, 0.938);
+   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+   text-align: left;
+}
+
+.contact_sec h3{
+   font-size: 16px;
+   padding-left: 0.5rem;
+   margin: 5px;
+   color: #473f38d3;
+   text-align: left;
+   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.123)
+}
+
+.contact_sec p{
+   font-size: 14px;
+   padding-left: 1rem;
+   color: rgba(255, 255, 255, 0.938);
+   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+   text-align: left;
 }
 
 .form-group {
-   display: flex;
-   flex-direction: column;
-   margin-bottom: 10px; /* Space between input groups */
-   margin: 10px;
+margin: 25px;
 }
 
-label {
-   font-size: 12px;
-   text-align: left;
-   text-transform: uppercase;
-   font-family: 'Ysabeau Infant', sans-serif;
-   color: #8F7D6D;
-   margin-left: 4.5rem;
-   font-weight: bold;
-   letter-spacing: 3px;
-   top: 0;
-   margin: auto;
-   padding: 5px;
+
+.form-group label{
+   font-size: 18px;
 }
 
-input {
-   width: 100%;
-   font-size: 16px;
-   border: 1px solid #ccc;
-   border-radius: 5px;
-   color: #8F7D6D;
-   text-align: start;
-   margin: auto;
-}
-
-.inputName{
-   width: 60vw;
-   height: 30px;
-}
-
-.inputEmail{
-   width: 60vw;
-   height: 30px;
-}
-
-.inputMessage{
-   height: 85px;
-   width: 60vw;
-}
-
-.contactBtn{
-   margin: auto;
-   width: 6rem;
-   padding: 10px;
-   font-size: 12px;
-   text-transform: uppercase;
-   letter-spacing: 3px;
-   color: white;
+.form-group input{
    border: none;
-   background-color: #B6A18E;
    border-radius: 5px;
-   margin-top: 1rem;
+   padding: 1rem;
 }
+
 
 /* Social/ Instagram Carousel */
 
@@ -960,7 +1194,6 @@ input {
       display:flex;
       flex-direction:row;
       justify-content: space-around;
-
    }
  }
 
@@ -1110,35 +1343,130 @@ input {
    padding: 2px;
 }
 
-/* @media screen and (min-width:500px) {
-    .productSection{
-      width: 85%;
+
+/* Media Queries */
+
+@media screen and (min-width:600px) {
+
+   /* Banner */
+
+   .leftSide{
+      width: 100%;
+   }
+   
+   .leftSide h1{
+      font-size:5rem;
+   }
+
+   /* Shop */
+   .shopSlogan{
+      width: 65%;
+   }
+
+   /* Product */
+   .productSection{
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 10px;
+      margin: 2rem;
+   }
+
+   /* Contact  */
+
+   #contactContainer{
+      width: 75% ;
+   }
+
+   .inputName{
+     width: 45vw;
+   }
+   
+   .inputEmail{
+      width: 45vw;
+      
+   }
+   
+   .inputMessage{
+      height: 100px;
+      width: 45vw;
+   }
+
+   /* Services */
+   .infoContainer{
+      margin-top: 3rem;
+   }
+
+   /* About Section */
+   .details{
+      padding-top: 0.2rem;
+      width: 68%;
+   }
+}
+
+@media screen and (min-width:850px) {
+
+      /* Product */
+      .productSection{
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 15px;
+         padding: 10px;
+         margin: 2rem;
+      }
+}
+
+@media screen and (min-width:1200px) {
+
+   /* Contact */
+   #contactContainer{
+      width: 55% ;
+      height: 550px;
+   }
+
+   .inputName{
+      width: 35vw;
+       height: 3rem;
+    }
+    
+    .inputEmail{
+       width: 35vw;
+       height: 3rem;
+       
+    }
+    
+    .inputMessage{
+       height: 120px;
+       width: 35vw;
+    }
+
+   /* Shop */
+   .shopSlogan{
+      width: 30%;
+   }
+
+   /* Product Section */
+   .productSection{
+      width: 65%;
       margin: auto;
    }
 
-   #shopContainer{
-     margin-top: 2rem;
-   }
-   
-   .productSection .productItem img{
-      width: 80%;
-   }
-/*
-   
-
-   .productItem button{
-      margin: ;
+     /* About Section */
+     .details{
+      padding-top: 1rem;
+      width: 75%;
    }
 
-   .detailBtns button{
-     width: 8rem;
-     height: 3rem;
-     font-size: 0.8rem;
-   } */
-} */
+   #aboutContainer{
+      width: 60%;
+      height: 20vh;
+      margin: auto;
+   }
 
+   .line{
+      width: 65%;
+   }
+}
 
 /* font-family: 'Bacasime Antique', serif;
 font-family: 'Ysabeau Infant', sans-serif; */

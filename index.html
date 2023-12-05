@@ -147,43 +147,21 @@
    
          </section>
 
-         <!-- Services -->
+         <!-- Services NB!!! -->
          <section id="serviceContainer">
    
-            <h1 class="headers">We Provide:</h1>
+            <h1 class="srvHeader">We Provide:</h1>
    
-               <div class="service_info">
+
+               <div class="srvListContainer">
    
-                     <!-- <ul class="serviceIconGroup">
-                        <div>
-                           <li class="serviceIcons">
-                              <img class="srvcIcon" src="./src/assets/srvImg/massage.png" alt="massageIcon" />
-                              <p>Massages</p>
-                           </li>
-                           <li class="serviceIcons">
-                              <img class="srvcIcon" src="./src/assets/srvImg/pedicure.png" alt="massageIcon" />
-                              <p>Pedicures</p>
-                           </li>
-                        </div>
-                        
-                        <li class="serviceIcons">
-                           <img class="srvcIcon" src="./src/assets/srvImg/manicure.png" alt="massageIcon" />
-                           <p>Manicures</p>
-                        </li>
-                        <li class="serviceIcons">
-                           <img class="srvcIcon" src="./src/assets/srvImg/facial.png" alt="facialIcon" />
-                           <p>Facials</p>
-                        </li>
-                        <li class="serviceIcons">
-                           <img class="srvcIcon" src="./src/assets/srvImg/waxing.png" alt="waxingIcon" />
-                           <p>Waxing</p>
-                        </li>
-                     </ul> -->
-   
-                     <button class="srvcBtn">
-                        <a href="./src/pages/servicePage/servicePage.html">Service Menu</a>
-                     </button>
+
                </div>
+
+               <button class="moreSrvBtn">
+                  <a href="./src/pages/servicePage/servicePage.html">Service Menu</a>
+               </button>
+
          </section>
 
          <!-- Contact Section -->
@@ -191,30 +169,67 @@
 
             <div class="contactSwirl">
    
-               <div>
-                  <h1 class="contactHeader">Send us a message</h1>
-                  <p class="contactsubHeader">We always love to hear from our customers</p>
+               <div class="contactDetails">
+
+                     <h2>Come on...</h2>
+                     <h1 class="contactHeader">Make an appointment</h1>
+                     <p class="contactsubHeader">We always love to have you here. Rest and your energy will be restored.</p>
+
+
+                     <div class="allInfo">
+
+                        <div class="contact_location">
+                           <h3>Our Location</h3>
+                           <p>20 Kromboom Rd, Rondebosch, Cape Town, 7700</p>
+                        </div>
+   
+                        <div class="otherDetails">
+
+                           <!-- Times -->
+                           <div class="contact_times">
+                              <h3>Our Times</h3>
+                              <p class="cntact_week">Mon - Sat 09.00-18.00</p>
+                              <p class="cntact_weekend">Sun & Public holidays Closed</p>
+                           </div>
+
+                           <!-- <div class="cnt_line"></div> -->
+
+                           <!-- Contact Info -->
+
+                           <div class="contact_sec">
+                              <h3>Contact Us</h3>
+                              <p class="landline">Tel:(021) 587 6235</p>  
+                              <p class="cntact_email">sereneskins.co.za</p>
+                           </div>
+
+                        </div>
+                 </div>
                </div>
+            </div>
+
+            <div>
+                  <form class="contactForm" method="get">
+                  
+                     <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input class="inputName" type="text" id="name" name="name" autocomplete="name" >
+                     </div>
+                     
+                     <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input class="inputEmail" type="text" id="email" name="email" autocomplete="email" >
+                     </div>
+                     
+                     <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <input class="inputMessage" type="text" id="message" name="message" autocomplete="message" >
+                     </div>
+                     
+                     <button class="contactBtn" type="submit">Send</button>
+                     </form>
       
-               <form class="contactForm" method="get">
-                  
-                  <div class="form-group">
-                     <label for="name">Your Name</label>
-                     <input class="inputName" type="text" id="name" name="name" autocomplete="name" >
-                  </div>
-                  
-                  <div class="form-group">
-                     <label for="email">Your Email</label>
-                     <input class="inputEmail" type="text" id="email" name="email" autocomplete="email" >
-                  </div>
-                  
-                  <div class="form-group">
-                     <label for="message">Your Message</label>
-                     <input class="inputMessage" type="text" id="message" name="message" autocomplete="message" >
-                  </div>
-                  
-                  <button class="contactBtn" type="submit">Send</button>
-                  </form>
+
+               </div>
    
             </div>
                
@@ -229,22 +244,30 @@
    
                   <i class="fa-solid fa-sack-dollar fa-2xl" style="color: #5a5555;"></i>
       
-                  <p class="valueInfo">We aim to provide you with the utmost satisfaction.If you are not entirely content with your service, please inform us immediately so that we can address any concerns.</p>
-      
+                  <div class="valueinfoContainer">
+                     <p class="valueInfo">We aim to provide you with the utmost satisfaction.If you are not entirely content with your service, please inform us immediately so that we can address any concerns.</p>
+                  </div>
+                  
                </div>
       
                <div class="delivery">
       
                   <i class="fa-solid fa-truck fa-2xl" style="color: #5a5555;"></i>
       
-                  <p class="valueInfo">Treat yourself to a moment of tranquility without leaving your home - it's luxury delivered, just for you.</p>
+                  <div class="valueinfoContainer">
+                     <p class="valueInfo">Treat yourself to a moment of tranquility without leaving your home - it's luxury delivered, just for you.</p>
+                  </div>
+                 
                </div>
       
                <div class="security">
       
                   <i class="fa-solid fa-credit-card fa-2xl" style="color: #5a5555;"></i>
       
-                  <p class="valueInfo">Your trust is our priority, and we are dedicated to ensuring a secure and worry-free transaction process.</p>
+                  <div class="valueinfoContainer">
+                    <p class="valueInfo">Your trust is our priority, and we are dedicated to ensuring a secure and worry-free transaction process.</p> 
+                  </div>
+                  
       
                </div>
    
