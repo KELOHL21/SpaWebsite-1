@@ -85,6 +85,10 @@ function injectServiceData() {
      newService.classList.add('srvItemContainer');
  
      newService.innerHTML = `
+     <div>
+     
+     <h1 class="srvHeader">We Provide:</h1>
+
        <div class="srvImgContainer">
          <img class="srvImg" src="${service.image}">
        </div>
@@ -99,6 +103,7 @@ function injectServiceData() {
          <div class="selectBooking">
            <button>Book Now</button>
          </div>
+       </div>
        </div>
      `;
  

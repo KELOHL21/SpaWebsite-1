@@ -367,7 +367,7 @@ button{
    display: flex;
    flex-direction: column;
    justify-content: center;
-   padding-top: 18rem;
+   padding-top: 22rem;
 }
 
 .srvBox{
@@ -740,36 +740,19 @@ button{
 
 .productBtn{
    padding: 8px;
-   border: none;
-   border-radius: 5px;
-   width: fit-content;
    font-size: 15px;
-   font-family: 'Ysabeau Infant', sans-serif;
+   font-family: "Barlow Semi Condensed", sans-serif;
    text-transform: uppercase;
-   color: white;
-   background-color:#8F7D6D ;
    letter-spacing: 2px;
-   margin-top: 2rem;
+   display: grid;
+   margin: auto;
 } 
 
-.productBtn a{
-   color: white;
-} 
 
 a{
    text-decoration: none;
    color: rgb(87, 77, 77);
 }
-
-
-
-
-/* .productListContainer{
-   width: 1200px;
-   margin: auto;
-   max-width: 90vw;
-   transition: 1s;
-} */
 
 .productSection .productItem img{
       width: 180px;
@@ -813,10 +796,6 @@ a{
    margin: 5px 0px 5px;
 }
 
-
- /* font-family: "Playfair Display", serif;
-   font-family: "Barlow Semi Condensed", sans-serif; */
-
 .productSection .productItem h2{
    font-size: 15px;
    text-transform: uppercase;
@@ -836,7 +815,8 @@ a{
    font-family: "Playfair Display", serif;
    font-size: 12px;
    font-weight: 600;
-   color: white;
+   color: white; 
+   padding-left: 5px;
 
 }
 
@@ -848,33 +828,7 @@ a{
    }
 }
 
-.productItem button{
-   padding: 5px;
-   border: none;
-   border-radius: 5px;
-   width: fit-content;
-   font-size: 10px;
-   font-family: 'Ysabeau Infant', sans-serif;
-   text-transform: uppercase;
-   color: white;
-   background-color:#7c614a;
-   letter-spacing: 1px;
-   white-space: nowrap;
-   margin: auto;
-   margin-top: 1rem;
-}
 
-.detailBtns .infoBtn{
-   background-color: #bda189;
-   color: rgb(255, 255, 255);
-}
-
-.detailBtns{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   width: 100%;
-}
 
 
  /* Service + Delivery Section */
