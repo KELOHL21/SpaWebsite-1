@@ -37,7 +37,8 @@ function injectData() {
       newProduct.classList.add('productItem');
 
       newProduct.innerHTML = `
-         <div>
+  
+         <div onclick="moreInfo(${product.id})">
 
             <div class='imgContainer'>
                <img src="${product.img}">
@@ -45,15 +46,17 @@ function injectData() {
             
             <h2>${product.title}</h2>
             <p>${product.price}</p>
-            <div class="detailBtns">
-               <button class="infoBtn" onclick="moreInfo(${product.id})">More Info</button>
-               <button onclick="addCartBtn(${product.id})">Add to cart</button>
-            </div>
+
          </div>
+         
       `;
 
       dataList.appendChild(newProduct);
    });
+}
+
+function moreInfo(productId) {
+   window.location.href = '/src/pages/productDetails/productDetails.html?id=' + productId;
 }
 
 
@@ -61,7 +64,7 @@ function injectData() {
 // ----------------------------------------------------
 
 // Service Section
-// Fetching Products
+// Fetching Services
 let services = null;
 fetch('/src/serviceData/srvData,.json')
 .then(reponse => reponse.json())

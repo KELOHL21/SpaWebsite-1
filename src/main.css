@@ -6,11 +6,11 @@
 }
 
 .mainBody{
-   background-color: #C8AB92;
+   background-color: #908471;
+   /* background-color: #C1b59f; */
 }
 
 .subBody{
-   background-image: url('./assets/img/bodyPattern.png');
    background-size: cover;
    background-repeat: no-repeat;
    background-position-x: center;
@@ -126,18 +126,12 @@ a{
 }
 
 .bookBtn{
-  margin: 1rem;
-  padding: 8px;
-  align-items: center;
-  text-transform: uppercase;
-  background-color: #8F7D6D;
-  color: rgb(255, 255, 255);
-  letter-spacing: 2px;
-  border: none;
-  border-radius: 5px;
-  font-weight: 400;
-  font-family: 'Bacasime Antique', serif;
-}
+  padding: 1rem 1.5rem;
+  border: 0;
+  border-radius: 1rem;
+  color: pink;
+ }
+ 
 
 .bookBtn a{
    color: white;
@@ -270,94 +264,110 @@ button{
    justify-content: center;
 }
 
+.introHeader{
+   display: grid;
+   place-content: center;
+   text-align: center;
+   margin-top: 3rem;
+}
+
 .leftSide{
-   width:98%;
+   height: auto;
    background-image: url('./assets/img/banner2.jpg');
    background-position: center;
    background-size: cover;
    height: auto;
    display: flex;
    flex-direction: column;
-   align-items:center; 
-   justify-content: center;
-   background-repeat: no-repeat;
 }
 
 .leftSide h1{
-   font-size:4rem;
-   color: #C8AB92;
-   font-family: 'Bacasime Antique', serif;
-   letter-spacing: 10px;
+   font-size:3rem;
+   color: #ffffff;
+   font-family: "Playfair Display", serif;
+   letter-spacing: 8px;
    font-weight: lighter;
    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.788);
+   margin-top: 2rem;
+   display: grid;
+   place-items: center;
 }
 
 .leftSide p{
-   font-size: 1.5rem;
-   color: #ffffff;
-   font-weight: 700;
+   font-size: 1rem;
+   color: #C1b59f;
+   font-weight: 600;
    letter-spacing: 2px;
-   text-shadow: 2px 2px 2px rgba(88, 88, 88, 0.89);
-   font-family: 'Ysabeau Infant', sans-serif;
    margin-top: -0.5rem;
+   font-family: "Barlow Semi Condensed", sans-serif;
+  font-style: italic;
 }
 
 .buttonSide{
    display: flex;
-   flex-direction: column;
+   flex-direction: row-reverse;
    align-items: center;
    justify-content: space-evenly;
    margin-top: 2rem;
 }
 
 .buttonSide button{
-   width: 16rem;
+   width: 10rem;
    height: 2.5rem;
    margin: 5px;
    border: none;
-   border-radius: 5px;
    font-size: 20px;
-   font-family: 'Bacasime Antique', serif;
+   font-family: "Barlow Semi Condensed", sans-serif;
    letter-spacing: 3px;
    padding: 5px;
+   border-radius: 5px;
 }
 
-@media screen and (min-width:700px) {
-   .buttonSide {
-      display: flex;
-      flex-direction: row;
-   }
-}
 
 .buttonSide button:nth-child(1){
-   background-color: #b49d89;
+   background-color: #C1b59f;
    color: whitesmoke;
-
+   font-size: 16px;
+   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .buttonSide button:nth-child(1):hover{
    border: 1px solid white;
-}
-
-.buttonSide button:nth-child(2){
-   background-color: transparent;
-   border: 1px solid white;
-   color: whitesmoke;
+   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .buttonSide button:nth-child(2):hover{
-   filter: blur(0.8px);
+   border:1px solid #C1b59f;
+   color: #C1b59f;
 }
+
+.buttonSide button:nth-child(2){
+      align-items: center;
+      text-shadow: 2px 2px 2px rgba(88, 88, 88, 0.89);
+      font-size: 16px;
+      color: rgb(255, 255, 255);
+      font-weight: 500;
+      letter-spacing: 2px;
+      border: none;
+      background: linear-gradient(135deg, rgba(70, 69, 69, 0.1), rgba(78, 75, 75, 0));
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(6px);
+      border:1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      border: 1px solid rgb(255, 245, 245);
+}
+
 /* Services */
 
- .serviceContainer{
+ #serviceContainer{
    width: 100%;
-   height: 50vh;
+   height: auto;
    text-align: center;
    align-items: center;
    display: flex;
    flex-direction: column;
    justify-content: center;
+   padding-top: 18rem;
 }
 
 .srvBox{
@@ -614,16 +624,119 @@ button{
    background-color: #ffffff;
    position: absolute; /* Position absolutely within the parent */
    width: 100%;
-   height: 45vh;
+   height: auto;
    z-index: 1;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   padding: 5px;
+   padding: 5px 2px 2px 2px;
    border-radius: 2px;
    box-shadow:  10px 10px 10px rgba(0, 0, 0, 0.295);
 }
+
+
+.aboutHeader{
+   margin: auto;
+   font-family: "Playfair Display", serif;
+  font-weight: 200;
+  font-style: italic;
+   font-size: 18px;
+   margin: 1.5rem 0 1.5rem;
+   color: #C1b59f;
+   padding-right:15rem;
+   text-shadow:  1px 1px 1px rgba(0, 0, 0, 0.1);
+   text-transform: uppercase;
+   white-space: nowrap;
+   letter-spacing: 1px;
+}
+
+.line{
+   height:1px;
+   width: 25%;
+   background-color: #C1b59f;
+   border: none;
+   margin-bottom: 15px;
+   margin-top: -1.3rem;
+   margin-right: 15rem;
+}
+
+
+.details{
+   padding-bottom: 1rem;
+   max-width: 92%;
+   margin: auto;
+   font-family: "Barlow Semi Condensed", sans-serif;
+   font-weight: 300;
+   font-style: normal;
+   letter-spacing: 1px;
+   font-size: 15px;
+   letter-spacing: 2px;
+   line-height: 17px;
+   text-align: left;
+}
+
+/* Shop */
+#shopContainer {
+   width: 100%;
+   height: auto;
+   position: relative;
+   margin: auto;
+   top: 21em;
+ }
+ 
+/* @media screen and (min-width:1200px) {
+   #shopContainer {
+      Reset margin for smaller screens
+     margin-top: 15rem;
+     
+     padding-top: 0;
+   }
+ } */
+
+
+
+ .shopHeader{
+   margin: auto;
+   font-family: "Playfair Display", serif;
+  font-weight: 200;
+   font-style: italic;
+   font-size: 18px;
+   margin: 1.5rem 1rem 1.5rem;
+   color: whitesmoke;
+   padding-right:15.5rem;
+   text-shadow:  1px 1px 1px rgba(0, 0, 0, 0.1);
+   text-transform: uppercase;
+   white-space: nowrap;
+   letter-spacing: 1px;
+ }
+
+ .line2{
+   height:1px;
+   width: 11%;
+   background-color: whitesmoke;
+   border: none;
+   margin-bottom: 15px;
+   margin-top: -1.3rem;
+   margin-left: 1rem;
+ }
+
+ 
+.shopSlogan{
+   padding-bottom: 1rem;
+   max-width: 92%;
+   margin: auto;
+   font-family: "Barlow Semi Condensed", sans-serif;
+   font-weight: 300;
+   font-style: normal;
+   letter-spacing: 1px;
+   font-size: 15px;
+   letter-spacing: 2px;
+   line-height: 17px;
+   text-align: left;
+   color: whitesmoke;
+}
+
 
 .productBtn{
    padding: 8px;
@@ -643,129 +756,20 @@ button{
    color: white;
 } 
 
-@media screen and (min-width:700px) {
-   .aboutContent{
-      margin-top: -4rem;
-   }
-
-   #aboutContainer{
-      width: 85%;
-      margin: auto;
-   }
-
-   .line{
-      width: 75%;
-   }
-}
-
-.aboutHeader{
-   margin: auto;
-   font-family: 'Ysabeau Infant', sans-serif;
-   font-size: 32px;
-   margin-top: -1rem;
-   margin-bottom: 1rem;
-   color: #4e4a4a;
-   letter-spacing: 4px;
-   font-weight: 100;
-   text-shadow:  2px 2px 2px rgba(0, 0, 0, 0.6);;
-}
-
-.line{
-   width:85%;
-   height:3px;
-   background-color: #8F7D6D;
-   border: none;
-   margin-bottom: 15px;
-   padding-top: -1rem;
-}
-
-.aboutLeftSide{
-   text-align: center;
-   line-height: 21px;
-}
-
-.details{
-   padding-bottom: 1rem;
-   width: 88%;
-   margin: auto;
-   font-family: 'Ysabeau Infant', sans-serif;
-   letter-spacing: 2px;
-}
-
-/* Shop */
-#shopContainer {
-   text-align: center;
-   position: relative;
-   /* Margin for larger screens */
-   padding-top: 28rem;
- }
- 
- @media screen and (min-width:1200px) {
-   #shopContainer {
-     /* Reset margin for smaller screens */
-     margin-top: 15rem;
-     /* Apply padding for smaller screens */
-     padding-top: 0;
-   }
- }
- 
-.shopSlogan{
-   width: 85%;
-   margin: auto;
-   font-family: 'Ysabeau Infant', sans-serif;
-   /* text-transform: uppercase; */
-   font-size: 17px;
-   text-align: center;
-   letter-spacing: 2px;
-   margin-top: 1rem;
-   margin-bottom: 2rem;
-   line-height: 28px;
-   color: whitesmoke;
-}
-
-.productHeader{
-   font-size: 17px;
-   text-align: center;
-   color: #5A5555;
-   padding: 5px;
-   font-family: 'Ysabeau Infant', sans-serif;
-   text-transform: uppercase;
-   align-items: center;
-}
-
-.productDescription{
-   font-family: 'Ysabeau Infant', sans-serif;
-   text-transform: uppercase;
-   align-items: center;
-   text-align:center;
-   color: #ffffffd7;
-   font-size: 11px;
-   padding-right: 10px;
-   padding-left: 10px;
-   padding-top: 8px;
-} 
-
 a{
    text-decoration: none;
    color: rgb(87, 77, 77);
 }
 
 
-.title{
-   font-size: xx-large;
-   padding-top: 2rem;
-   padding-bottom: 2rem;
-   letter-spacing: 6px;
-   font-family: 'Bacasime Antique', serif;
-   color: #8F7D6D;
-}
 
-.productListContainer{
+
+/* .productListContainer{
    width: 1200px;
    margin: auto;
    max-width: 90vw;
    transition: 1s;
-}
+} */
 
 .productSection .productItem img{
       width: 180px;
@@ -774,12 +778,24 @@ a{
       filter: blur(20%);
 }
 
+@media screen  and (min-width:600px) {
+   .productSection{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 10px;
+      margin:2rem;
+      margin: auto;
+      filter:drop-shadow(0 5px 8px #74737369);
+      align-items: center;
+   }
+}
+
 .productSection{
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
+   place-items: center;
    gap: 10px;
-   padding: 10px;
-   margin:2rem;
+   padding: 40px;
    margin: auto;
    filter:drop-shadow(0 5px 8px #74737369);
    align-items: center;
@@ -792,22 +808,36 @@ a{
 }
 
 .productSection .productItem{
-   background-color: whitesmoke;
-   padding: 10px;
-   border-radius: 15px;
+   padding: 5px;
+   border-radius: 2px;
+   margin: 5px 0px 5px;
 }
 
+
+ /* font-family: "Playfair Display", serif;
+   font-family: "Barlow Semi Condensed", sans-serif; */
+
 .productSection .productItem h2{
-   font-size: 12px;
+   font-size: 15px;
    text-transform: uppercase;
    padding: 5px;
    letter-spacing: 2px;
    white-space: nowrap;
+   font-family: "Barlow Semi Condensed", sans-serif;
+   font-weight: 500;
+   color: white;
+   /* font-style: italic; */
+   
 }
 
 .productSection .productItem p{
    letter-spacing: 2px;
-   padding-top: 15px;
+   padding-top: 5px;
+   font-family: "Playfair Display", serif;
+   font-size: 12px;
+   font-weight: 600;
+   color: white;
+
 }
 
 @media screen and (min-width:950px) {
