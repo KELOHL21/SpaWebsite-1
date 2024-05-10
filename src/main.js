@@ -87,13 +87,6 @@ function injectServiceData() {
      newService.innerHTML = `
      <div>
 
-     <h1 class="srvHeader">We Provide:</h1>
-     <hr class="line"/>
-
-     <h2 class="srvDescrption">
-      Indulge in ultimate relaxation with our spa services, designed to rejuvenate your body and mind, offering massages, facials, and more for a blissful escape from the everyday hustle and bustle.
-     </h2>
-
        <div class="srvImgContainer">
          <img class="srvImg" src="${service.image}">
        </div>
