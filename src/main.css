@@ -368,7 +368,9 @@ button{
    flex-direction: column;
    justify-content: center;
    margin-top: 25rem;
-   background-color: whitesmoke;
+   padding-bottom: 3rem;
+   background-color: whitesmoke; 
+   z-index: 1;
 }
 
 .srvBox{
@@ -404,7 +406,6 @@ button{
    object-fit: cover;
 }
 
-
 .selectBooking{
    margin-top: 10px;
 }
@@ -412,18 +413,20 @@ button{
 .selectBooking button{
    padding: 10px 15px 10px 15px;
    font-size: 12px;
+   letter-spacing: 2px;
    font-family: "Playfair Display", serif;
-   font-weight: 500;
+   font-weight: 700;
    text-align: center;
    text-transform: uppercase;
    border: none;
-   background-color: #C1b59f;
-   color:whitesmoke ;
+   background-color: black;
+   color:#C1b59f;
    border-radius: 2px;
 }
 
 .selectBooking button:hover{
    background-color: #aa9582f1;
+   color: whitesmoke;
 }
 
 .srvHeader{
@@ -446,14 +449,14 @@ button{
    max-width: 92%;
    margin: auto;
    font-family: "Barlow Semi Condensed", sans-serif;
-   font-weight: 300;
+   font-weight: 400;
    font-style: normal;
    letter-spacing: 1px;
    font-size: 15px;
    letter-spacing: 2px;
    line-height: 17px;
    text-align: left;
-
+   color: #9c9280;
 }
 
 .srvDetails{
@@ -463,40 +466,27 @@ button{
    color: #8F7D6D;
 }
 
-/* .srvItemContainer{
-   margin-top: -0.1rem;
-   display: flex;
-   flex-direction: column-reverse;
-} */
-
 .moreSrvBtn{
    padding: 12px;
-   width: 10rem;
    border: none;
-   background-color:white ;
+   background-color: #C1b59f;
    display: flex;
    justify-items: center;
    margin: auto;
-   margin-top: 2rem;
-   border-radius: 5px;
-}
-
-.moreSrvBtn:hover{
-   border: 1px solid #ffffffcc ;
-   transition: ease-in;
+   margin:1rem 0rem 1rem 0rem;
+   border-radius: 2px;
 }
 
 .moreSrvBtn a{
-   align-items: center;
-   text-align: center;
-   margin: auto;
-   font-size: 12px;
-   font-family: 'Bacasime Antique', serif;
-   font-weight: 700;
+   padding: 8px;
+   font-size: 15px;
+   font-family: "Barlow Semi Condensed", sans-serif;
    text-transform: uppercase;
-   border-radius: 3px;
-   color: #aa9582cc;
-   letter-spacing: 3px;
+   letter-spacing: 2px;
+   display: grid;
+   margin: auto;
+   color: white;
+   padding: 0px 10px 0px 10px;
 }
 
 .srvDetails h2{
@@ -515,6 +505,7 @@ button{
    letter-spacing: 2px;
    line-height: 20px;
    padding: 10px;
+   color: #9c9280;
 }
 
 @media screen and (min-width:600px) {
@@ -687,19 +678,9 @@ button{
    position: relative;
    margin: auto;
    top: 21em;
+  
  }
  
-/* @media screen and (min-width:1200px) {
-   #shopContainer {
-      Reset margin for smaller screens
-     margin-top: 15rem;
-     
-     padding-top: 0;
-   }
- } */
-
-
-
  .shopHeader{
    margin: auto;
    font-family: "Playfair Display", serif;
@@ -741,7 +722,7 @@ button{
    color: whitesmoke;
 }
 
-
+/* More products btn */
 .productBtn{
    padding: 8px;
    font-size: 15px;
@@ -750,6 +731,7 @@ button{
    letter-spacing: 2px;
    display: grid;
    margin: auto;
+   color: #C1b59f;
 } 
 
 
@@ -759,9 +741,9 @@ a{
 }
 
 .productSection .productItem img{
-      width: 180px;
-      height: 150px;
-      border-radius: 20px;
+      width: 230px;
+      height: 230px;
+      border-radius: 2px;
       filter: blur(20%);
 }
 
@@ -781,7 +763,7 @@ a{
 .productSection{
    display: grid;
    place-items: center;
-   gap: 10px;
+   gap: 15px;
    padding: 40px;
    margin: auto;
    filter:drop-shadow(0 5px 8px #74737369);
@@ -808,18 +790,23 @@ a{
    white-space: nowrap;
    font-family: "Barlow Semi Condensed", sans-serif;
    font-weight: 500;
-   color: white;
-   /* font-style: italic; */
-   
+   color: #C1b59f;
+   background-color: black;
+   width: 100%; 
+}
+
+.productSection .productItem h2:hover{
+   background-color:  #C1b59f;
+   color: whitesmoke;
 }
 
 .productSection .productItem p{
    letter-spacing: 2px;
    padding-top: 5px;
    font-family: "Playfair Display", serif;
-   font-size: 12px;
+   font-size: 15px;
    font-weight: 600;
-   color: white; 
+   color: whitesmoke; 
    padding-left: 5px;
 
 }
@@ -919,142 +906,126 @@ a{
 /* Contact Section */
 
 #contactContainer{
- display: grid;
- grid-template-rows: repeat(2, 1fr);
- row-gap: 15px;
- align-items: center;
- text-align: center;
- width: 100%;
- height: 70vh;
- margin: auto;
- margin-top: 10rem;
- /* background-color: green; */
-}
-
-#contactContainer div{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-}
-
-.contactDetails{
-   width: 100%;
-   margin: auto;
-}
-
-.contactDetails h2{
-   font-size: 12px;
-   text-transform: uppercase;
-   padding-bottom: 0.2rem;
-   letter-spacing: 1px;
-   color: #7a6d62d3;
-   padding-left: 0.5rem;
-   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.151);
+ background-color: #C1b59f;
+ height: auto; 
+ margin: -5px 5px 5px 5px;
+ border-radius: 2px;
+ padding: 0.5rem;
 }
 
 .contactHeader{
-   font-size: 30px;
-   color: #473f38d3;
-   letter-spacing: 1px;
-   padding: 0.5rem;
-   margin-top: -0.5rem;
-   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.123);
-}
-
-.contactsubHeader{
-   width: 65%;
-   padding-left: 0.6rem;
-   color: rgba(255, 255, 255, 0.938);
-   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-   font-size: 14px;
-   text-align: justify;
-   letter-spacing: 2px;
-   margin: auto;
-}
-
-.allInfo{
-   margin-top: 1rem;
-}
-
-.contact_location h3{
-   font-size: 16px;
-   padding-left: 0.5rem;
-   margin: 5px;
-   color: #473f38d3;
-   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.123)
-}
-
-.contact_location p{
-   font-size: 14px;
-   padding-left: 1rem;
-   color: rgba(255, 255, 255, 0.938);
-   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.otherDetails{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-}
-
-.cnt_line{
-   width: 5rem;
-   height: 2px;
-   background-color: #4e4a4a;
-   transform: rotate(-90deg);
-   transform-origin: left; /* Set the rotation origin to the left */
-   writing-mode:horizontal-tb;
-}
-
-.contact_times h3{
-   font-size: 16px;
-   padding-left: 0.5rem;
-   margin: 5px;
-   text-align: left;
-   color: #473f38d3;
-   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.123)
-}
-
-.contact_times p{
-   font-size: 14px;
-   padding-left: 1rem;
-   color: rgba(255, 255, 255, 0.938);
-   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-   text-align: left;
-}
-
-.contact_sec h3{
-   font-size: 16px;
-   padding-left: 0.5rem;
-   margin: 5px;
-   color: #473f38d3;
-   text-align: left;
-   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.123)
-}
-
-.contact_sec p{
-   font-size: 14px;
-   padding-left: 1rem;
-   color: rgba(255, 255, 255, 0.938);
-   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-   text-align: left;
-}
-
-.form-group {
-margin: 25px;
-}
-
-
-.form-group label{
+   font-family: "Playfair Display", serif;
+   font-weight: 200;
+   font-style: italic;
    font-size: 18px;
+   margin: 1rem 1rem;
+   color:  rgb(0, 0, 0);
+   text-shadow:  1px 1px 1px rgba(0, 0, 0, 0.1);
+   text-transform: uppercase;
+   white-space: nowrap;
+   letter-spacing: 1px;
 }
 
-.form-group input{
+.line3{
+   height:1px;
+   max-width: 50%;
+   background-color:  rgb(0, 0, 0);
    border: none;
-   border-radius: 5px;
-   padding: 1rem;
+   margin-bottom: 15px;
+   margin-top: -0.5rem;
+   margin-left: 1rem;
+ }
+
+
+.subHeader{
+   font-family: "Barlow Semi Condensed", sans-serif;
+   font-size: 38px;
+   color: whitesmoke;
+   font-weight: 300;
+   padding: 5px;
+   white-space: nowrap;
 }
+
+.description{
+   font-family: "Barlow Semi Condensed", sans-serif;
+   color: whitesmoke;
+   font-size: 18px;
+   color: whitesmoke;
+   font-weight: 300;
+   padding: 5px;
+   letter-spacing: 1px;
+}
+
+.divider{
+   margin: 1rem 0rem 1rem 0rem;
+   height:1px;
+   max-width: 100%;
+   background-color:  #c1b59f2e;;
+   border: none;
+}
+
+.contactForm{
+   display:flex;
+   flex-direction: column;
+   padding: 2px;
+}
+
+.nameSection{
+   display: grid;
+   grid-template-columns: auto auto; /* Two columns */
+   grid-template-rows: auto; /* Single row */
+   grid-column-gap: 10px; /* Adjust this value as needed for spacing */
+   padding-bottom: 15px;
+}
+
+.nameSection label{
+   font-family: "Barlow Semi Condensed", sans-serif;
+   color: whitesmoke;
+   letter-spacing: 1px;
+}
+
+.nameSection input{
+   height: 2.2rem;
+   border: none;
+   border-radius: 3px
+}
+
+.infoSection div{
+   display: flex;
+   flex-direction: column;
+   padding-bottom: 15px;
+   font-family: "Barlow Semi Condensed", sans-serif;
+   color: whitesmoke;
+   letter-spacing: 1px;
+}
+
+.infoSection div input{
+   height: 2.2rem;
+   border: none;
+   border-radius: 3px
+}
+
+.infoSection div textarea{
+   min-height: 100px;
+   max-width: auto;
+   resize: none;
+   border: none;
+}
+
+.contactForm button{
+   padding: 8px;
+   font-size: 15px;
+   font-family: "Barlow Semi Condensed", sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   display: grid;
+   border: none;
+   margin: auto;
+   background-color: #000000;
+   color: #C1b59f;
+}
+
+
 
 
 /* Social/ Instagram Carousel */
