@@ -905,26 +905,35 @@ a{
 
 /* Contact Section */
 
-#contactContainer{
- background-color: #C1b59f;
- height: auto; 
- margin: -5px 5px 5px 5px;
- border-radius: 2px;
- padding: 0.5rem;
+#contactContainer {
+   position: relative; /* Ensure position relative for pseudo-element */
+   height: auto; 
+   margin-top: 1rem;
+   border-radius: 2px;
+   padding-top: 1rem;
+   background-position: center;
+   background-size: cover;
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+   padding: 10px;
+   background-image: url('./assets/img/flower.png');
 }
 
-.contactHeader{
+
+.contactHeader {
    font-family: "Playfair Display", serif;
    font-weight: 200;
    font-style: italic;
    font-size: 18px;
-   margin: 1rem 1rem;
+   margin: 1rem;
    color:  rgb(0, 0, 0);
    text-shadow:  1px 1px 1px rgba(0, 0, 0, 0.1);
    text-transform: uppercase;
    white-space: nowrap;
    letter-spacing: 1px;
 }
+
 
 .line3{
    height:1px;
@@ -956,18 +965,70 @@ a{
    letter-spacing: 1px;
 }
 
-.divider{
+/* Dunno why its not displaying!! */
+/* .divider{
    margin: 1rem 0rem 1rem 0rem;
-   height:1px;
+   height:50px;
    max-width: 100%;
    background-color:  #c1b59f2e;;
    border: none;
-}
+} */
 
 .contactForm{
    display:flex;
    flex-direction: column;
-   padding: 2px;
+   padding: 1px;
+}
+
+.busInfoContainer{
+   display: inline-grid;
+   padding: 10px;
+   margin: 1rem 0.3rem 1rem 0.3rem;
+   background-color:  #b3a992ef;
+   border-radius: 5px;
+   width: fit-content;
+   height: fit-content;
+}
+
+.busInfoSubSection{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding:10px;
+   background-color: #948b78cd;
+   margin-bottom: 1rem;
+   height: 70px;
+   border-radius: 5px;
+}
+
+.busInfoSubSection div{
+   padding-left: 15px;
+}
+
+.busInfoSubSection i{
+   color: #C1b59f;
+   background-color: rgb(0, 0, 0);
+   /* width: fit-content;
+   height: fit-content; */
+   padding: 20px;
+   border-radius: 20px;
+}
+
+.busInfoSubSection h1{
+   font-family: "Playfair Display", serif;
+   font-size: 20px;
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.busInfoSubSection h2{
+   font-size: 14px;
+   font-family: "Barlow Semi Condensed", sans-serif;
+   letter-spacing: 1px;
+   color: whitesmoke;
+   font-weight: 300;
 }
 
 .nameSection{
@@ -982,12 +1043,13 @@ a{
    font-family: "Barlow Semi Condensed", sans-serif;
    color: whitesmoke;
    letter-spacing: 1px;
+   font-weight: 500;
 }
 
 .nameSection input{
    height: 2.2rem;
    border: none;
-   border-radius: 3px
+   border-radius: 3px;
 }
 
 .infoSection div{
@@ -1003,6 +1065,13 @@ a{
    height: 2.2rem;
    border: none;
    border-radius: 3px
+}
+
+.infoSection label{
+   font-family: "Barlow Semi Condensed", sans-serif;
+   color: whitesmoke;
+   letter-spacing: 1px;
+   font-weight: 500;
 }
 
 .infoSection div textarea{
@@ -1022,10 +1091,9 @@ a{
    border: none;
    margin: auto;
    background-color: #000000;
-   color: #C1b59f;
+   color: #ffffff;
+   margin: 1rem 0.5rem 1rem 0.5rem;
 }
-
-
 
 
 /* Social/ Instagram Carousel */
