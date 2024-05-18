@@ -169,47 +169,8 @@
          </section>
 
          <!-- Contact Section -->
-         <section id="contactContainer">
+         <section id="contactContainer" class="contactContainer">
 
-            <!-- <div class="contactSwirl">
-   
-               <div class="contactDetails">
-
-                     <h2>Come on...</h2>
-                     <h1 class="contactHeader">Make an appointment</h1>
-                     <p class="contactsubHeader">We always love to have you here. Rest and your energy will be restored.</p>
-
-
-                     <div class="allInfo">
-
-                        <div class="contact_location">
-                           <h3>Our Location</h3>
-                           <p>20 Kromboom Rd, Rondebosch, Cape Town, 7700</p>
-                        </div>
-   
-                        <div class="otherDetails">
-
-                          Times
-                           <div class="contact_times">
-                              <h3>Our Times</h3>
-                              <p class="cntact_week">Mon - Sat 09.00-18.00</p>
-                              <p class="cntact_weekend">Sun & Public holidays Closed</p>
-                           </div>
-
-                          <div class="cnt_line"></div> 
-
-                            Contact Info
-
-                           <div class="contact_sec">
-                              <h3>Contact Us</h3>
-                              <p class="landline">Tel:(021) 587 6235</p>  
-                              <p class="cntact_email">sereneskins.co.za</p>
-                           </div>
-
-                        </div>
-                 </div>
-               </div>
-            </div> -->
             <div>
                <h1 class="contactHeader">Lets get in Touch</h1>
                <hr class="line3"/>
@@ -391,13 +352,73 @@
    <script src="./src/main.js"></script>
    
 </body>
-   
-   <footer class="footer_container">
-      <div class="top_footer">
 
-            <div class="slogan_footer">
-               <p class="footer_slogan">Its always great to serve YOU</p>
-            </div>  
+<footer class="footer_container">
+   <div class="dropDownList">
+         <div class="dropDownItem">
+            <label for="contact">Contact</label>
+            <select name="contact" id="contactList">
+               <option>Tel:(021) 587 6235</option>
+               <option>Whatsapp:074 695 3659</option>
+               <option>Email:sereneskins.co.za</option>
+            </select>
+         </div>
+         <label class="dropdown">
+
+            <div class="dd-button">
+               Contact
+            </div>
+          
+            <input type="checkbox" class="dd-input" id="test">
+          
+            <ul class="dd-menu">
+              <li>Tel:(021) 587 6235</li>
+              <li>Whatsapp:074 695 3659</li>
+              <li>Email:sereneskins.co.za</li>
+              <li class="divider"></li>
+              <li>
+                <a href="http://rane.io">Link to Rane.io</a>
+              </li>
+            </ul>
+            
+          </label>
+   </div>
+   <!-- <div class="dropdown" id="contactDropdown">
+      <div class="select" onclick="toggleDropdown('contactDropdown')">
+         <span class="selected">Contact</span>
+         <div class="caret"></div>
+      </div>
+      <ul class="menu">
+         <li>Tel:(021) 587 6235</li>
+         <li>Whatsapp:074 695 3659</li>
+         <li>Email:sereneskins.co.za</li>
+      </ul>
+   </div>
+
+   <div class="dropdown" id="locationDropdown">
+      <div class="select" onclick="toggleDropdown('locationDropdown')">
+         <span class="selected">Location</span>
+         <div class="caret"></div>
+      </div>
+      <ul class="menu">
+         <li>20 Kromboom Rd, Rondebosch, Cape Town, 7700</li>
+      </ul>
+   </div>
+
+   <div class="dropdown" id="hoursDropdown">
+      <div class="select" onclick="toggleDropdown('hoursDropdown')">
+         <span class="selected">Spa Hours</span>
+         <div class="caret"></div>
+      </div>
+      <ul class="menu"> 
+         <li>Mon - Sat 09.00-18.00</li>
+         <li>Sun & Public holidays 09.00-16.00</li>
+      </ul>
+   </div> -->
+</footer>
+
+   <!-- <footer class="footer_container">
+      <div class="top_footer"> 
 
             <div class="footer_details">
 
@@ -431,6 +452,6 @@
                <i class="fa-brands fa-instagram fa-xl" style="color: #424242;"></i>
             </div>
       </div>
-   </footer>
+   </footer> -->
 
 </html>
