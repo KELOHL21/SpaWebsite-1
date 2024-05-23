@@ -607,7 +607,6 @@ button{
 
 } 
 
-
 /* About Section */
 
 #aboutContainer{
@@ -819,9 +818,6 @@ a{
        margin: auto; 
    }
 }
-
-
-
 
  /* Service + Delivery Section */
 #valuesContainer{
@@ -1198,17 +1194,278 @@ a{
    line-height: 15px;
  }
 
+ 
  /* Footer */
- .footer_container {
+ /* .footer_container {
+   width: 100%;
+   height:auto ;
+   background-color: rgb(255, 255, 255);
+   color: rgb(0, 0, 0);
+   margin: auto;
+   margin-top: 5rem;
+   position: relative; /* Ensure position relative for absolute elements *
+}
+
+.dropDownItem{
+   margin: 2rem;
+}
+
+span {
+   padding : px;
+   background : #2d2f31; 
+   color : white;
+   font-size : 1.2em;
+   font-variant : small-caps;
+   cursor : pointer;
+   display: block;
+ }
+ 
+ span::after {
+   float: right;
+   right: 10%;
+   content: "+";
+ }
+ 
+ .slide {
+   clear:both;
+   width:100%;
+   height:0px;
+   overflow: hidden;
+   text-align: center;
+   transition: height .4s ease;
+ }
+ 
+ .slide li {padding : 2px;}
+ 
+ #touch {position: absolute; opacity: 0; height: 0px;}    
+ 
+ #touch:checked + .slide {height: 70px;}  
+  */
+
+  /* .footer_container {
    width: 100%;
    height: auto;
    background-color: rgb(255, 255, 255);
    color: rgb(0, 0, 0);
    margin: auto;
    margin-top: 5rem;
-   position: relative; /* Ensure position relative for absolute elements */
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center; 
 }
 
+.dropDownList{
+   padding: 1.5rem 0rem 0rem 0rem;
+   line-height: 25px;
+}
+
+.dropDownItem {
+   background-color: none;
+}
+
+hr{
+   color: #9c8b7b;
+   height: 2px;
+   width: 90%;
+   margin: 1rem;
+}
+
+span {
+   padding: 2px;
+   color: #a49b88;
+   font-size: 1.5em;
+   font-variant: small-caps;
+   cursor: pointer;
+   display: block;
+   font-family: "Playfair Display", serif;
+   font-weight: 500;
+
+}
+ 
+span::after {
+   float: right;
+   right: 10%;
+   content: "+";
+}
+ 
+.slide {
+   clear: both;
+   width: 100%;
+   height: 0;
+   overflow: hidden;
+   text-align: center;
+   transition: height .1s ease-in-out;
+   max-width: 300px;
+  
+}
+ 
+.slide li {
+   padding: 2px 5px;
+   text-align: left;
+   font-family: "Barlow Semi Condensed", sans-serif;
+   font-weight: 400;
+   color: #ada38f;
+   font-size: 13px;
+   letter-spacing: 0.5px;
+   line-height: 18px;
+   max-width: 250px;
+}
+
+input[type="checkbox"] {
+   position: absolute;
+   opacity: 0;
+   height: 0;
+   width: 0;
+}
+
+input[type="checkbox"]:checked + .slide {
+   height: auto;
+}
+
+input[type="checkbox"]:checked + label span::after {
+   content: "-";
+} */
+
+.footer_container {
+   width: 100%;
+   height: auto;
+   background-color: rgb(255, 255, 255);
+   color: rgb(0, 0, 0);
+   margin: auto;
+   margin-top: 5rem;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.dropDownList {
+   padding: 1.5rem 0rem 0rem 0rem;
+   line-height: 25px;
+}
+
+.dropDownItem {
+   width: 100%;
+   margin: 1rem 0;
+}
+
+hr {
+   color: #9c8b7b;
+   height: 2px;
+   width: 90%;
+   margin: 1rem;
+}
+
+.dropDownHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   cursor: pointer;
+   padding: 2px;
+   font-size: 1.5em;
+   font-variant: small-caps;
+   font-family: "Playfair Display", serif;
+   font-weight: 500;
+   color: #a49b88;
+   width: 100%;
+}
+
+.dropDownHeader span {
+   margin-right:1rem;
+}
+
+.dropDownHeader::after {
+   content: "+";
+   font-size: 1.5em;
+   margin-left: 1rem;
+}
+
+input[type="checkbox"]:checked + .dropDownHeader::after {
+   content: "-";
+}
+
+.slide {
+   clear: both;
+   width: 100%;
+   height: 0;
+   overflow: hidden;
+   text-align: center;
+   transition: height .1s ease-in-out;
+   max-width: 300px;
+   background-color: blue;
+}
+
+.slide li {
+   padding: 2px 5px;
+   text-align: left;
+   font-family: "Barlow Semi Condensed", sans-serif;
+   font-weight: 400;
+   color: #ada38f;
+   font-size: 13px;
+   letter-spacing: 0.5px;
+   line-height: 18px;
+   max-width: 250px;
+}
+
+input[type="checkbox"] {
+   position: absolute;
+   opacity: 0;
+   height: 0;
+   width: 0;
+}
+
+input[type="checkbox"]:checked + label + .slide {
+   height: auto;
+}
+
+
+.smallFooter{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 1rem;
+   color: #C1b59f;
+}
+
+.smallFooter h1{
+   font-family: "Playfair Display", serif;
+   font-size: 18px;
+   color: #9f9583;
+   
+}
+
+.smallFooter i{
+   padding: 0px 5px 0px 5px;
+}
+
+.smallFooter p{
+   font-variant: small-caps; 
+   font-size: 14px;
+}
+
+.paymentMethods{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 1rem;
+}
+
+.paymentImageContainer{
+   width: 40px;
+   height: auto;
+   margin: 8px;
+}
+
+.paymentImg{
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
 
 /* Media Queries */
 
