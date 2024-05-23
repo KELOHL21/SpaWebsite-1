@@ -43,7 +43,7 @@ closeCart.addEventListener("click", () => {
 // Fetching Products
 
 let products = null;
-fetch('/src/productData/productDetails.json')
+fetch('/src/data/productData/productDetails.json')
 .then(reponse => reponse.json())
 .then(data => {
    // Putting my data into the products variable that was orginally null

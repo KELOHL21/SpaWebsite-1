@@ -16,7 +16,7 @@ toggleBtn.onclick = function () {
 // Fetching Products
 
 let products = null;
-fetch('/src/serviceData/srvData,.json')
+fetch('/src/data/serviceData/srvData,.json')
 .then(reponse => reponse.json())
 .then(data => {
    // Putting my data into the products variable that was orginally null

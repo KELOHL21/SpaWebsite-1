@@ -1,7 +1,7 @@
 // Initialize products as an empty array
 let products = [];
 
-fetch('/src/productData/productDetails.json')
+fetch('/src/data/productData/productDetails.json')
   .then(response => response.json())
   .then(data => {
     // Update the products array with the fetched data

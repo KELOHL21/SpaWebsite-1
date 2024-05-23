@@ -17,7 +17,7 @@ toggleBtn.onclick = function () {
 // Shop Section
 // Fetching Products
 let products = null;
-fetch('/src/productData/productDetails.json')
+fetch('/src/data/productData/productDetails.json')
 .then(reponse => reponse.json())
 .then(data => {
    // Putting my data into the products variable that was orginally null
@@ -66,7 +66,7 @@ function moreInfo(productId) {
 // Service Section
 // Fetching Services
 let services = null;
-fetch('/src/serviceData/srvData,.json')
+fetch('/src/data/serviceData/srvData,.json')
 .then(reponse => reponse.json())
 .then(data => {
    // Putting my data into the products variable that was orginally null
@@ -102,6 +102,7 @@ function injectServiceData() {
            <button>Book Now</button>
          </div>
        </div>
+
        </div>
      `;
  
@@ -109,10 +110,52 @@ function injectServiceData() {
    });
  }
  
-
+// -------------------------------------------------
 
 
 // Instagram Carousel
 let imgCopy = document.querySelector('.carousel-slide').cloneNode(true);
 document.querySelector('.carousel-slider').appendChild(imgCopy);
+
+// -----------------------------------------------------
+
+
+// Blog Section 
+document.addEventListener("DOMContentLoaded", function() {
+   let blogDetails = null;
+
+   // Fetching Blog Data
+   fetch('/src/data/blogInfoData/blogInfo.json')
+   .then(response => response.json())
+   .then(data => {
+       blogDetails = data;
+       injectBlogData(blogDetails.slice(0, 4)); // Display the first 4 blog entries initially
+   })
+   .catch(error => console.error('Error fetching JSON:', error));
+
+   // Function to inject blog data into the HTML
+   function injectBlogData(blogs) {
+       const blogContainer = document.querySelector('.blogInfoContainer');
+       blogContainer.innerHTML = ''; // Clear previous content
+
+       blogs.forEach(blog => {
+           const blogItem = document.createElement('div');
+           blogItem.classList.add('blogItemContainer');
+
+           blogItem.innerHTML = `
+               <div class="blogImg">
+                   <img src="path/to/your/image.jpg" alt="${blog.title}">
+               </div>
+               <div class="blogDetails">
+                   <h1 class="blogHeader">${blog.title}</h1>
+                   <p>${blog.introDescription}</p>
+                   <a href="/src/pages/blogDetails/blogDetails.html?id=${blog.id}" class="moreBlog">Read More</a>
+                   <p>${blog.datePublished}</p>
+               </div>
+           `;
+
+           blogContainer.appendChild(blogItem);
+       });
+   }
+});
 
