@@ -143,12 +143,12 @@ document.addEventListener("DOMContentLoaded", function() {
            blogItem.classList.add('blogItemContainer');
 
            blogItem.innerHTML = `
-               <div class="blogImg">
-                   <img src="path/to/your/image.jpg" alt="${blog.title}">
+               <div class="blogImgContainer">
+                   <img class="blogImg" src="${blog.img}" alt="${blog.title}">
                </div>
                <div class="blogDetails">
                    <h1 class="blogHeader">${blog.title}</h1>
-                   <p>${blog.introDescription}</p>
+                   <p class="blogDescription">${blog.introDescription}</p>
                    <a href="/src/pages/blogDetails/blogDetails.html?id=${blog.id}" class="moreBlog">Read More</a>
                    <p>${blog.datePublished}</p>
                </div>

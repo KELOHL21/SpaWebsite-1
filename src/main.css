@@ -1107,6 +1107,84 @@ a{
    margin: 1rem 0.5rem 1rem 0.5rem;
 }
 
+/* Blog Section */
+.blogContainer{
+   width: 100%;
+}
+
+.blogItemContainer{
+   margin-top: 10px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   background-color: pink;
+   width: 100%;
+   height: 250px;
+}
+
+.blogItemContainer:nth-child(2){
+   display: flex;
+   flex-direction: row-reverse;
+}
+.blogItemContainer:nth-child(4){
+   display: flex;
+   flex-direction: row-reverse;
+}
+
+.blogContainerHeader{
+   font-family: "Barlow Semi Condensed", sans-serif;
+   font-size: 38px;
+   color: #C1b59f;
+   font-weight: 300;
+   padding: 5px;
+   white-space: nowrap;
+   margin: 0rem 0.8rem;
+}
+
+.blogContainerSubHeader{
+   font-family: "Playfair Display", serif;
+   font-weight: 200;
+   font-style: italic;
+   font-size: 18px;
+   color: whitesmoke;
+   margin: 0rem 1rem;
+   text-shadow:  1px 1px 1px rgba(0, 0, 0, 0.1);
+   text-transform: uppercase;
+   white-space: nowrap;
+   letter-spacing: 1px;
+}
+
+.blogImgContainer{
+ width: 90%;
+ height: auto;
+ background-color: blue;
+}
+
+.blogImg{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.blogDetails{
+   max-width: 200px;
+   background-color: red;
+}
+
+.blogHeader{
+   font-family: "Playfair Display", serif;
+   /* white-space: nowrap; */
+   font-size: 20px;
+}
+
+.blogDescription{
+   font-family: "Barlow Semi Condensed", sans-serif;
+   font-size: 12px;
+   padding: 5px;
+   text-align: justify;
+   max-width: 500px;
+}
+
 
 /* Social/ Instagram Carousel */
 
