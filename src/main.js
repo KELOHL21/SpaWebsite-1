@@ -114,8 +114,8 @@ function injectServiceData() {
 
 
 // Instagram Carousel
-let imgCopy = document.querySelector('.carousel-slide').cloneNode(true);
-document.querySelector('.carousel-slider').appendChild(imgCopy);
+// let imgCopy = document.querySelector('.carousel-slide').cloneNode(true);
+// document.querySelector('.carousel-slider').appendChild(imgCopy);
 
 // -----------------------------------------------------
 
@@ -149,8 +149,9 @@ document.addEventListener("DOMContentLoaded", function() {
                <div class="blogDetails">
                    <h1 class="blogHeader">${blog.title}</h1>
                    <p class="blogDescription">${blog.introDescription}</p>
-                   <a href="/src/pages/blogDetails/blogDetails.html?id=${blog.id}" class="moreBlog">Read More</a>
-                   <p>${blog.datePublished}</p>
+                   <a href="/src/pages/blogDetails/blogDetails.html?id=${blog.id}" class="moreBlog">Read More >>></a>
+                   <hr class="blogDivider"/>
+                   <p class="datePublished">${blog.datePublished}</p>
                </div>
            `;
 
